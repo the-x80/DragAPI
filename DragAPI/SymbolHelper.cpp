@@ -34,7 +34,7 @@ SYMBOL_INFO* DebugSymbolHelper::GetSymInfoFromAddr(DWORD64 dw_Address)
 	SYMBOL_INFO* si_Info;
 	si_Info = (SYMBOL_INFO*)malloc(sizeof(si_Info) + 256);
 	if (si_Info == nullptr) {
-		throw new ::Exceptions::BadAllocationException();
+		throw new DragAPI::Exceptions::BadAllocationException();
 		return nullptr;
 	}
 	ZeroMemory(si_Info, sizeof(si_Info) + 256);
@@ -50,7 +50,7 @@ SYMBOL_INFO* DebugSymbolHelper::GetSymInfoFromAddr(DWORD64 dw_Address)
 	}
 	return si_Info;
 }
-
+/*
 DebugMethodInfo* DebugSymbolHelper::GetDebugMethodInfoFromAddress(DWORD64 dw_Address)
 {
 	SYMBOL_INFO* si_Info = nullptr;
@@ -71,11 +71,11 @@ DebugMethodInfo* DebugSymbolHelper::GetDebugMethodInfoFromAddress(DWORD64 dw_Add
 
 	return retVal;
 }
-
+*/
 bool DebugSymbolHelper::GetMethodNameFromAddress(DWORD64 dw_Address, char* cstr_Name)
 {
 	if (cstr_Name == nullptr) {
-		throw new ::Exceptions::ArgumentNullException();
+		throw new DragAPI::Exceptions::ArgumentNullException();
 	}
 
 

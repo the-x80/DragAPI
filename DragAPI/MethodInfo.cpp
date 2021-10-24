@@ -45,7 +45,7 @@ MethodInfo::MethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols)
 		if (b_SymInitResult == FALSE) {
 #ifdef _DEBUG
 			sprintf(cstr_DebugMessage, "Symbol initialization failed. GetLastError returned %d\n", GetLastError());
-			OutputDebugString(cstr_DebugMessage);
+			OutputDebugStringA(cstr_DebugMessage);
 #endif
 		}
 
@@ -68,19 +68,19 @@ MethodInfo::MethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols)
 	if (b_SymFromAddeResult == FALSE) {
 #ifdef _DEBUG
 		sprintf(cstr_DebugMessage, "Retrieving symbol from address 0x%p failed. GetLastError returned %d\n", (void*)dw_Address, GetLastError());
-		OutputDebugString(cstr_DebugMessage);
+		OutputDebugStringA(cstr_DebugMessage);
 #endif
 		switch (GetLastError()) {
 		case ERROR_MOD_NOT_FOUND:
 #ifdef _DEBUG
 			sprintf(cstr_DebugMessage, "The specified module could not be found.\n");
-			OutputDebugString(cstr_DebugMessage);
+			OutputDebugStringA(cstr_DebugMessage);
 #endif
 			break;
 		case ERROR_INVALID_ADDRESS:
 #ifdef _DEBUG
 			sprintf(cstr_DebugMessage, "Attempt to access invalid address.\n");
-			OutputDebugString(cstr_DebugMessage);
+			OutputDebugStringA(cstr_DebugMessage);
 #endif
 			break;
 		}
@@ -129,7 +129,7 @@ MethodInfo::MethodInfo(SYMBOL_INFO* si_Info)
 		this->cstr_MethodName = new char[si_Info->NameLen + 1];
 	}
 	catch (std::bad_alloc e) {
-		throw new ::Exceptions::BadAllocationException();
+		throw new DragAPI::Exceptions::BadAllocationException();
 		return;
 	}
 	memset(cstr_MethodName, 0, si_Info->NameLen + 1);

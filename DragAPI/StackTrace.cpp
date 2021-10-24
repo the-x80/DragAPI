@@ -132,7 +132,7 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 
 			StackTraceEntry sf_Entry;
 			sf_Entry.dw_Address = sf_StackFrame.AddrPC.Offset;
-			sf_Entry.dmi_Method = new DebugMethodInfo(sf_Entry.dw_Address, false);
+			//sf_Entry.dmi_Method = new DebugMethodInfo(sf_Entry.dw_Address, false);
 
 			this->a_StackWalkEntries.Add(sf_Entry);
 			
