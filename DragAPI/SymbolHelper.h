@@ -1,6 +1,6 @@
 #ifndef SYMBOL_HELPER_H
 #define SYMBOL_HELPER_H
-#include "Exceptions.h"
+#include "Exceptions/Exceptions.h"
 
 namespace DebugSymbolHelper {
 	static bool b_IsInitialized;
@@ -20,13 +20,13 @@ namespace DebugSymbolHelper {
 	/// </summary>
 	/// <param name="dw_Address">Address of the function</param>
 	/// <returns>A pointer to a DebugMethodInfo structure describing the function.</returns>
-	DebugMethodInfo* GetDebugMethodInfoFromAddress(DWORD64 dw_Address);
+	//DebugMethodInfo* GetDebugMethodInfoFromAddress(DWORD64 dw_Address);
 
 	bool GetMethodNameFromAddress(DWORD64 dw_Address, char* cstr_Name);
 
 
 	namespace Exceptions {
-		class SymInitializationException : public ::Exceptions::Exception {
+		class SymInitializationException : public DragAPI::Exceptions::Exception {
 		public:
 			int n_LastError;
 		};

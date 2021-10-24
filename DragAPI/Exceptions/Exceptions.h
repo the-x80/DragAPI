@@ -3,9 +3,10 @@
 #include <stdexcept>
 #include <exception>
 
-class DragAPI::Diagnostics::StackTrace;
-
 namespace DragAPI {
+	namespace Diagnostics {
+		class StackTrace;
+	}
 	namespace Exceptions {
 		class Exception : public std::exception {
 		protected:
@@ -17,7 +18,7 @@ namespace DragAPI {
 
 			int n_SourceFileLine;
 
-			Diagnostics::StackTrace* stackTrace;
+			DragAPI::Diagnostics::StackTrace* stackTrace;
 			/// <summary>
 			/// Describes the method that the exception was thrown in.
 			/// </summary>

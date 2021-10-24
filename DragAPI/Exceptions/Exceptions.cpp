@@ -132,3 +132,27 @@ DragAPI::Exceptions::BadAllocationException::BadAllocationException()
 DragAPI::Exceptions::BadAllocationException::BadAllocationException(const char* msg) : DragAPI::Exceptions::Exception(msg)
 {
 }
+
+DragAPI::Exceptions::OutOfMemoryException::OutOfMemoryException()
+{
+}
+
+DragAPI::Exceptions::ArgumentNullException::ArgumentNullException()
+{
+}
+
+DragAPI::Exceptions::IndexOutOfBoundsException::IndexOutOfBoundsException()
+{
+}
+
+DragAPI::Exceptions::DivisionByZeroException::DivisionByZeroException()
+{
+}
+
+DragAPI::Exceptions::IOException::IOException()
+{
+}
+
+DragAPI::Exceptions::NotImplementedException::NotImplementedException()
+{
+}

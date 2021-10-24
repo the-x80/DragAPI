@@ -154,10 +154,12 @@
     <ClInclude Include="Array\Array.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="Exceptions\Exceptions.h" />
+    <ClInclude Include="InfoObject.h" />
     <ClInclude Include="MethodInfo.h" />
     <ClInclude Include="ModuleInfo.h" />
     <ClInclude Include="StackTrace.h" />
     <ClInclude Include="SymbolHelper.h" />
+    <ClInclude Include="TypeInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array\Array.cpp" />

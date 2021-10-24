@@ -7,6 +7,8 @@
 
 #include "Exceptions/Exceptions.h"
 
+#include "StackTrace.h"
+
 #include "Array/Array.h"
 
 

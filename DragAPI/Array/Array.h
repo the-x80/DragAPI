@@ -62,7 +62,7 @@ namespace DragAPI {
 
 			this->elements = (T*)malloc(sizeof(T) * (this->Length() + 1));
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			//This will throw an exception. Make sure you do some sanity checks before
@@ -82,7 +82,7 @@ namespace DragAPI {
 			T* buffer = this->elements;
 			this->elements = (T*)malloc(sizeof(T) * (this->length + 1));
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			memcpy_s(this->elements + sizeof(T),
@@ -103,7 +103,7 @@ namespace DragAPI {
 			T* gen_Buffer = this->elements;
 			this->elements = (T*)malloc(sizeof(T) * (this->length + 1));
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			memcpy(this->elements, gen_Buffer, n_SizePreInsert);
@@ -115,14 +115,14 @@ namespace DragAPI {
 		}
 		inline bool Remove(T gen_Element) {
 			if (this->Length() == 0) {
-				throw new Exceptions::ArrayEmptyException();
+				throw new DragAPI::Exceptions::ArrayEmptyException();
 			}
 
 			bool b_Return = false;
 			T* gen_Buffer = elements;//Copy the current contents into the buffer
 			elements = (T*)malloc(sizeof(T) * (length - 1));//Create a new memory location with a smaller size.
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			int n_Index = 0;
@@ -137,10 +137,10 @@ namespace DragAPI {
 			return b_Return;
 		}
 		inline bool RemoveAt(int index) {
-			throw new Exceptions::NotImplementedException();
+			throw new DragAPI::Exceptions::NotImplementedException();
 
 			if ((index >= this->length) || (index < 0)) {
-				throw new Exceptions::IndexOutOfBoundsException();
+				throw new DragAPI::Exceptions::IndexOutOfBoundsException();
 			}
 
 
@@ -155,7 +155,7 @@ namespace DragAPI {
 			T* gen_Buffer = this->elements;
 			this->elements = (T*)malloc(n_NewSize);
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			memcpy(this->elements, gen_Buffer, n_NewSize);
@@ -167,13 +167,13 @@ namespace DragAPI {
 			int n_NewSize = (this->length - 1) * sizeof(T);
 			if (n_NewSize < 0) {
 				//There should be an exception thrown here.
-				throw new Exceptions::ArrayEmptyException();
+				throw new DragAPI::Exceptions::ArrayEmptyException();
 			}
 
 			T* gen_Buffer = this->elements;
 			this->elements = (T*)malloc(n_NewSize);
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
+				throw new DragAPI::Exceptions::BadAllocationException("Unable to allocate memory for the resized array.");
 			}
 
 			memcpy(this->elements, gen_Buffer + sizeof(T), n_NewSize);
@@ -198,7 +198,7 @@ namespace DragAPI {
 			//Thrown when new is called.
 			this->elements = (T*)malloc(0);
 			if (this->elements == nullptr) {
-				throw new ::Exceptions::BadAllocationException();
+				throw new DragAPI::Exceptions::BadAllocationException();
 			}
 		}
 
@@ -209,7 +209,7 @@ namespace DragAPI {
 
 		inline T& operator[](unsigned long index) {
 			if ((index >= this->length) || (index < 0)) {
-				throw new Exceptions::IndexOutOfBoundsException();
+				throw new DragAPI::Exceptions::IndexOutOfBoundsException();
 			}
 			return elements[index];
 		}
