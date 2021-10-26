@@ -152,22 +152,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array\Array.h" />
+    <ClInclude Include="DateTime.h" />
+    <ClInclude Include="Debug.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="Exceptions\Exceptions.h" />
     <ClInclude Include="InfoObject.h" />
     <ClInclude Include="MethodInfo.h" />
     <ClInclude Include="ModuleInfo.h" />
+    <ClInclude Include="Quaternion.h" />
     <ClInclude Include="StackTrace.h" />
     <ClInclude Include="SymbolHelper.h" />
     <ClInclude Include="TypeInfo.h" />
+    <ClInclude Include="Vector3.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array\Array.cpp" />
+    <ClCompile Include="DateTime.cpp" />
+    <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Exceptions\Exceptions.cpp" />
     <ClCompile Include="MethodInfo.cpp" />
     <ClCompile Include="ModuleInfo.cpp" />
+    <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="StackTrace.cpp" />
     <ClCompile Include="SymbolHelper.cpp" />
+    <ClCompile Include="Vector3.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

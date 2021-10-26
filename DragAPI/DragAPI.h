@@ -5,13 +5,31 @@
 #include <Windows.h>
 #endif
 
+#include <d3d9.h>
+#include <d3d10_1.h>
+#include <d3d11.h>
+#include <d3d12.h>
+
+#pragma comment(lib, "d3d9.lib")
+#pragma comment(lib, "d3d10_1.lib")
+#pragma comment(lib, "d3d11.lib")
+#pragma comment(lib, "d3d12.lib")
+
 #include "Exceptions/Exceptions.h"
 
 #include "StackTrace.h"
 
+#include "Debug.h"
+
 #include "Array/Array.h"
+
+#include "DateTime.h"
+#include "Vector3.h"
+#include "Quaternion.h"
+
+#include "Window.h"
 
 
 namespace DragAPI {
-
+	static const char version[5] = "0.1b";
 }
