@@ -19,7 +19,7 @@ void DragAPI::Debug::Write(const char* msg)
 	}
 
 
-	DateTime messageTime = DateTime();
+	DateTime messageTime = DateTime::Now();
 	DragAPI::Diagnostics::StackTrace stackTrace = DragAPI::Diagnostics::StackTrace(1);
 
 
@@ -35,4 +35,12 @@ void DragAPI::Debug::WriteLine(const char* msg)
 	if (IsDebuggerPresent() == false) {
 		return;
 	}
+}
+
+void DragAPI::Debug::Write(const wchar_t* msg)
+{
+}
+
+void DragAPI::Debug::WriteLine(const wchar_t* msg)
+{
 }

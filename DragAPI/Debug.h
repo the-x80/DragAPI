@@ -12,6 +12,9 @@ namespace DragAPI {
 
 		inline void Write(const char* msg);
 		inline void WriteLine(const char* msg);
+
+		inline void Write(const wchar_t* msg);
+		inline void WriteLine(const wchar_t* msg);
 	}
 }
 

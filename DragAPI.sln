@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DragAPI", "DragAPI\DragAPI.vcxproj", "{2C10575D-0CA0-4712-B6B7-194C4A161172}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DragAPI Tester", "DragAPI Tester\DragAPI Tester.vcxproj", "{38024FBD-7B24-4CEF-BC90-018AD29A8278}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{2C10575D-0CA0-4712-B6B7-194C4A161172}.Release|x64.Build.0 = Release|x64
 		{2C10575D-0CA0-4712-B6B7-194C4A161172}.Release|x86.ActiveCfg = Release|Win32
 		{2C10575D-0CA0-4712-B6B7-194C4A161172}.Release|x86.Build.0 = Release|Win32
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Debug|x64.ActiveCfg = Debug|x64
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Debug|x64.Build.0 = Debug|x64
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Debug|x86.ActiveCfg = Debug|Win32
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Debug|x86.Build.0 = Debug|Win32
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Release|x64.ActiveCfg = Release|x64
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Release|x64.Build.0 = Release|x64
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Release|x86.ActiveCfg = Release|Win32
+		{38024FBD-7B24-4CEF-BC90-018AD29A8278}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

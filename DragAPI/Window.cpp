@@ -15,11 +15,15 @@ DragAPI::Window::Window()
 	h_WindowHandle = NULL;
 	ZeroMemory(&this->rect, sizeof(this->rect));
 	ZeroMemory(&this->wcex_Registered, sizeof(this->wcex_Registered));
+
+	this->wcex_Registered.cbSize = sizeof(this->wcex_Registered);
 }
 
 DragAPI::Window::Window(Window* parent) : DragAPI::Window::Window()
 {
-
+	h_WindowHandle = NULL;
+	ZeroMemory(&this->rect, sizeof(this->rect));
+	ZeroMemory(&this->wcex_Registered, sizeof(this->wcex_Registered));
 }
 
 void DragAPI::Window::Paint()

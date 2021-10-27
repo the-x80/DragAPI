@@ -15,6 +15,7 @@ namespace DragAPI {
 	class Window {
 	private:
 		HWND h_WindowHandle;
+		MSG msg;
 		RECT rect;
 		WindowMode mode;
 
