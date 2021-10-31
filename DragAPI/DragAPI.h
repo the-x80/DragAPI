@@ -24,8 +24,10 @@
 #include "Array/Array.h"
 
 #include "DateTime.h"
-#include "Vector3.h"
+#include "Vectors.h"
 #include "Quaternion.h"
+
+#include "DragAPI.Networking.h"
 
 #include "Window.h"
 
