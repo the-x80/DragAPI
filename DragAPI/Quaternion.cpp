@@ -1,4 +1,3 @@
-#include "Vector3.h"
 #include "Quaternion.h"
 #include <cmath>
 
@@ -15,11 +14,11 @@ SAMP::Quaternion::Quaternion(float _w, float _x, float _y, float _z)
 	this->w = _w;
 }
 
-Vector3 SAMP::Quaternion::ToEulerAngles()
+DragAPI::Vector3 SAMP::Quaternion::ToEulerAngles()
 {
 	//Be sure to switch the axes if necessary.
 	//Code was yoinked online. Might not work as intended
-	Vector3 angles = Vector3();
+	DragAPI::Vector3 angles = DragAPI::Vector3();
 	// roll (x-axis rotation)
 	double sinr_cosp = 2 * (this->w * this->x + this->y * this->z);
 	double cosr_cosp = 1 - 2 * (this->x * this->x + this->y * this->y);
@@ -40,7 +39,7 @@ Vector3 SAMP::Quaternion::ToEulerAngles()
 	return angles;
 }
 
-void SAMP::Quaternion::FromEulerAngles(Vector3 angles)
+void SAMP::Quaternion::FromEulerAngles(DragAPI::Vector3 angles)
 {
 	//Be sure to switch the axes if necessary.
 	//Code was yoinked online. Might not work as intended

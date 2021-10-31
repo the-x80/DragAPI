@@ -158,6 +158,9 @@
     <ClInclude Include="DragAPI.Networking.h" />
     <ClInclude Include="Exceptions\Exceptions.h" />
     <ClInclude Include="InfoObject.h" />
+    <ClInclude Include="IO\IOExceptions.h" />
+    <ClInclude Include="IO\File.h" />
+    <ClInclude Include="IO\IO.h" />
     <ClInclude Include="Json\Json.h" />
     <ClInclude Include="MethodInfo.h" />
     <ClInclude Include="ModuleInfo.h" />
@@ -174,6 +177,8 @@
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Exceptions\Exceptions.cpp" />
+    <ClCompile Include="IO\IOExceptions.cpp" />
+    <ClCompile Include="IO\File.cpp" />
     <ClCompile Include="MethodInfo.cpp" />
     <ClCompile Include="ModuleInfo.cpp" />
     <ClCompile Include="Networking\Sockets.cpp" />

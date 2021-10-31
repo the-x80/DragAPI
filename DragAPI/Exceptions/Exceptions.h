@@ -68,11 +68,6 @@ namespace DragAPI {
 			DivisionByZeroException();
 		};
 
-		class IOException : public Exception {
-		public:
-			IOException();
-		};
-
 		class NotImplementedException : Exception {
 		public:
 			NotImplementedException();

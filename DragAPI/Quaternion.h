@@ -1,5 +1,6 @@
 #ifndef QUATERNION_H
 #define QUATERNION_H
+#include "Vectors.h"
 
 
 namespace SAMP {
@@ -11,8 +12,8 @@ namespace SAMP {
 		Quaternion();
 		Quaternion(float _w, float _x, float _y, float _z);
 
-		Vector3 ToEulerAngles();
-		void FromEulerAngles(Vector3 angles);
+		DragAPI::Vector3 ToEulerAngles();
+		void FromEulerAngles(DragAPI::Vector3 angles);
 
 		//Implement operators
 	};
