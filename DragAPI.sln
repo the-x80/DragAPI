@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DragAPI", "DragAPI\DragAPI.vcxproj", "{2C10575D-0CA0-4712-B6B7-194C4A161172}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DragAPI Tester", "DragAPI Tester\DragAPI Tester.vcxproj", "{38024FBD-7B24-4CEF-BC90-018AD29A8278}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2C10575D-0CA0-4712-B6B7-194C4A161172} = {2C10575D-0CA0-4712-B6B7-194C4A161172}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

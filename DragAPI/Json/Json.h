@@ -2,6 +2,7 @@
 #define DRAG_API_JSON_H
 
 #include "../Array/Array.h"
+#include "../IO/IO.h"
 
 
 namespace DragAPI {
@@ -19,8 +20,10 @@ namespace DragAPI {
 		};
 
 		class JsonDocument {
-		public:
+		private:
 
+		public:
+			JsonDocument();
 		};
 	}
 }

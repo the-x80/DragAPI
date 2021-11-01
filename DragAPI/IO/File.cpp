@@ -21,6 +21,7 @@ DragAPI::IO::File::~File()
 
 bool DragAPI::IO::File::Open()
 {
+	
 	return false;
 }
 

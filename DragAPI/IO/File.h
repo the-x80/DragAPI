@@ -25,6 +25,8 @@ namespace DragAPI {
 			bool Open();
 			bool Close();
 
+			long GetSize();
+
 			bool Read(void* buffer, int bufferSize);
 			bool Read(Array<void>* buffer);
 
