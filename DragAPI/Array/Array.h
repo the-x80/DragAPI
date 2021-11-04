@@ -16,6 +16,8 @@
 #include "../Exceptions/Exceptions.h"
 #endif
 
+//TODO:Make the reservedSize and reservedLength feature work. Currently its not implemented.
+
 
 namespace DragAPI {
 	namespace Exceptions {
@@ -29,19 +31,72 @@ namespace DragAPI {
 	template <typename T> class Array {
 	private:
 		T* elements;
-		unsigned long size;//Size on memory
-		unsigned long length;//The number of elements
+
+		/// <summary>
+		/// Specifies the current size of the array in memory.
+		/// Only counts non empty elements.
+		/// </summary>
+		unsigned long size;
+
+		/// <summary>
+		/// Specifies the current number of elements in the array.
+		/// Only counts non empty elements.
+		/// </summary>
+		unsigned long length;
+
+		/// <summary>
+		/// Specifies the actuall size of the array on the heap in bytes.
+		/// </summary>
+		unsigned long reservedSize;
+
+		/// <summary>
+		/// Specifies the ammount of total reserved slots in the array.
+		/// </summary>
+		unsigned long reservedLength;
+
+		/// <summary>
+		/// Set to true if this is a fixed size array.
+		/// </summary>
+		bool isFixedSize;
 	public:
-		inline Array()
+		inline Array():
+			elements((T*)malloc(0)),
+			length(0),
+			size(0),
+			reservedLength(0),
+			reservedSize(0)
 		{
-			this->elements = new T[0];
-			this->length = 0;
-			this->size = 0;
 		}
 		inline Array(int n_StartLength) {
-			this->elements = new T[n_StartLength];
-			this->length = n_StartLength;
-			this->size = n_StartLength * sizeof(T);
+			throw new Exceptions::NotImplementedException();
+
+
+			this->length = 0;
+			this->size = 0 * sizeof(T);
+
+			this->reservedLength = n_StartLength;
+			this->reservedSize = sizeof(T) * this->reservedLength;
+
+			this->elements = (T*)malloc(this->reservedSize);
+		}
+		inline Array(T* initialElements, unsigned int elementCount) :
+			elements((T*)malloc(sizeof(T)*elementCount)),
+			length(elementCount),
+			size(sizeof(T)* elementCount),
+			reservedLength(elementCount),
+			reservedSize(sizeof(T)* elementCount) {
+			memcpy_s(this->elements, sizeof(T) * this->length, initialElements, sizeof(T) * elementCount);
+		}
+
+		inline Array(Array& other) {
+			
+			this->length = other.length;
+			this->size = other.size;
+			this->elements = (T*)malloc(sizeof(T) * (this->Length() + 1));
+			memcpy_s(this->elements, this->size, other.elements, other.size);
+		}
+		inline Array(Array&& other) noexcept {
+
 		}
 		inline ~Array()
 		{
@@ -49,6 +104,8 @@ namespace DragAPI {
 
 			this->length = 0;
 			this->size = 0;
+			this->reservedLength = 0;
+			this->reservedSize = 0;
 		}
 
 		/// <summary>
@@ -201,9 +258,19 @@ namespace DragAPI {
 				throw new DragAPI::Exceptions::BadAllocationException();
 			}
 		}
+		inline void SetFixedSize(bool value) {
+			this->isFixedSize = value;
+		}
+		inline void SetFixedSize(bool value, int length) {
+			this->isFixedSize = value;
+			this->reservedLength = length;
+		}
 
-		unsigned long Length() {
+		unsigned long Length() const{
 			return length;
+		}
+		T* GetBufferPointer() const {
+			return this->elements;
 		}
 
 
