@@ -5,6 +5,8 @@
 #include <Windows.h>
 #endif
 
+#include "../Data Types/String.h"
+
 #include "../Array/Array.h"
 #include "../Exceptions/Exceptions.h"
 
@@ -12,10 +14,12 @@ namespace DragAPI {
 	namespace IO {
 		class File {
 		private:
-			char* cstrFileName;
+			String cstrFileName;
 			HFILE hFile;
 
 			long n_size;
+
+			bool b_isFileOpen;
 		public:
 			File();
 			File(const char* cstr_fName);

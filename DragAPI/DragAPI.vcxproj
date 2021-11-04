@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array\Array.h" />
+    <ClInclude Include="Data Types\Integers.h" />
     <ClInclude Include="Data Types\String.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Debug.h" />
@@ -163,6 +164,7 @@
     <ClInclude Include="IO\File.h" />
     <ClInclude Include="IO\IO.h" />
     <ClInclude Include="Json\Json.h" />
+    <ClInclude Include="Math\Math.h" />
     <ClInclude Include="MethodInfo.h" />
     <ClInclude Include="ModuleInfo.h" />
     <ClInclude Include="Networking\Sockets.h" />
@@ -181,6 +183,7 @@
     <ClCompile Include="Exceptions\Exceptions.cpp" />
     <ClCompile Include="IO\IOExceptions.cpp" />
     <ClCompile Include="IO\File.cpp" />
+    <ClCompile Include="Math\Math.cpp" />
     <ClCompile Include="MethodInfo.cpp" />
     <ClCompile Include="ModuleInfo.cpp" />
     <ClCompile Include="Networking\Sockets.cpp" />

@@ -1,5 +1,9 @@
 #pragma once
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <iostream>
+
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 #ifndef _WINDOWS_
 #include <Windows.h>
@@ -14,6 +18,8 @@
 #pragma comment(lib, "d3d10_1.lib")
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "d3d12.lib")
+
+#include "Data Types/String.h"
 
 #include "Exceptions/Exceptions.h"
 

@@ -8,6 +8,14 @@
 #include "StackTrace.h"
 #include "DateTime.h"
 
+void DragAPI::Debug::BeginDebugGroup()
+{
+}
+
+void DragAPI::Debug::EndDebugGroup()
+{
+}
+
 void DragAPI::Debug::Write(const char* msg)
 {
 	if (isDebugBuild == false) {
@@ -42,5 +50,21 @@ void DragAPI::Debug::Write(const wchar_t* msg)
 }
 
 void DragAPI::Debug::WriteLine(const wchar_t* msg)
+{
+}
+
+void DragAPI::Debug::Write(const char* msg, ...)
+{
+}
+
+void DragAPI::Debug::WriteLine(const char* msg, ...)
+{
+}
+
+void DragAPI::Debug::Write(const wchar_t* msg, ...)
+{
+}
+
+void DragAPI::Debug::WroteLine(const wchar_t* msg, ...)
 {
 }

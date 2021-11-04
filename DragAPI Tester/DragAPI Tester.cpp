@@ -8,10 +8,10 @@
 
 int main()
 {
-    
+    DragAPI::String testString = L"This is a test";
 
 
-
+    OutputDebugStringA(testString);
 
 }
 

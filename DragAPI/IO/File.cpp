@@ -1,32 +1,44 @@
 #include "File.h"
 
-DragAPI::IO::File::File()
+#include "../Debug.h"
+
+DragAPI::IO::File::File() :
+	cstrFileName()
 {
-	cstrFileName = nullptr;
+	n_size = 0;
 	hFile = (HFILE)INVALID_HANDLE_VALUE;
+	b_isFileOpen = false;
 }
 
-DragAPI::IO::File::File(const char* cstr_fName)
+DragAPI::IO::File::File(const char* cstr_fName):
+	cstrFileName(cstr_fName)
 {
-	cstrFileName = nullptr;
+	
+	n_size = 0;
 	hFile = (HFILE)INVALID_HANDLE_VALUE;
+	b_isFileOpen = false;
 }
 
 DragAPI::IO::File::~File()
 {
-	if (this->cstrFileName != nullptr) {
-		delete[] this->cstrFileName;
+	if (this->b_isFileOpen) {
+		this->Close();
 	}
 }
 
 bool DragAPI::IO::File::Open()
 {
-	
+	this->hFile = (HFILE)CreateFile(this->cstrFileName, GENERIC_READ | GENERIC_WRITE,
+		FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	if (this->hFile == (HFILE)INVALID_HANDLE_VALUE) {
+
+	}
 	return false;
 }
 
 bool DragAPI::IO::File::Close()
 {
+	CloseHandle((HANDLE)this->hFile);
 	return false;
 }
 
