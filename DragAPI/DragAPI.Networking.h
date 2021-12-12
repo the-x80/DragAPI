@@ -8,6 +8,7 @@ namespace DragAPI{
 }
 
 #include "Networking/Sockets.h"
+#include "Networking/Web.h"
 
 
 #endif

@@ -24,25 +24,25 @@
     <ClInclude Include="Exceptions\Exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MethodInfo.h">
+    <ClInclude Include="Diagnostics\MethodInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ModuleInfo.h">
+    <ClInclude Include="Diagnostics\ModuleInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StackTrace.h">
+    <ClInclude Include="Diagnostics\StackTrace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SymbolHelper.h">
+    <ClInclude Include="Diagnostics\SymbolHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InfoObject.h">
+    <ClInclude Include="Diagnostics\InfoObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TypeInfo.h">
+    <ClInclude Include="Diagnostics\TypeInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Window.h">
+    <ClInclude Include="Graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Debug.h">
@@ -51,10 +51,10 @@
     <ClInclude Include="DateTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vectors.h">
+    <ClInclude Include="Data Types\Vectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Quaternion.h">
+    <ClInclude Include="Data Types\Quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DragAPI.Networking.h">
@@ -84,6 +84,36 @@
     <ClInclude Include="Math\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics\Graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostics\Diagnostics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostics\Profiling\Profiling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IO\TextFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Injector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\Web.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HTML\HTML.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Text\Text Document\TextDocument.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Text\Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array\Array.cpp">
@@ -92,19 +122,19 @@
     <ClCompile Include="Exceptions\Exceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MethodInfo.cpp">
+    <ClCompile Include="Diagnostics\MethodInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleInfo.cpp">
+    <ClCompile Include="Diagnostics\ModuleInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StackTrace.cpp">
+    <ClCompile Include="Diagnostics\StackTrace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SymbolHelper.cpp">
+    <ClCompile Include="Diagnostics\SymbolHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
+    <ClCompile Include="Graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Debug.cpp">
@@ -113,10 +143,10 @@
     <ClCompile Include="DateTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Vectors.cpp">
+    <ClCompile Include="Data Types\Vectors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Quaternion.cpp">
+    <ClCompile Include="Data Types\Quaternion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Networking\Sockets.cpp">
@@ -132,6 +162,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Math\Math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IO\TextFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Injector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\Web.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTML\HTML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Text\Text Document\TextDocument.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

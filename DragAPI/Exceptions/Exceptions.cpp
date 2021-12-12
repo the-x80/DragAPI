@@ -11,8 +11,9 @@
 #pragma comment(lib, "Dbghelp.lib")
 
 #include "../Array/Array.h"
-#include "../StackTrace.h"
+#include "../Diagnostics/Diagnostics.h"
 
+#include <vector>
 #include <string>
 
 

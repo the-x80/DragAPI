@@ -151,29 +151,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Application\Application.h" />
     <ClInclude Include="Array\Array.h" />
     <ClInclude Include="Data Types\Integers.h" />
     <ClInclude Include="Data Types\String.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="Diagnostics\Diagnostics.h" />
+    <ClInclude Include="Diagnostics\Profiling\Profiling.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="DragAPI.Networking.h" />
     <ClInclude Include="Exceptions\Exceptions.h" />
-    <ClInclude Include="InfoObject.h" />
+    <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Diagnostics\InfoObject.h" />
+    <ClInclude Include="HTML\HTML.h" />
+    <ClInclude Include="Injector.h" />
     <ClInclude Include="IO\IOExceptions.h" />
     <ClInclude Include="IO\File.h" />
     <ClInclude Include="IO\IO.h" />
+    <ClInclude Include="IO\TextFile.h" />
     <ClInclude Include="Json\Json.h" />
     <ClInclude Include="Math\Math.h" />
-    <ClInclude Include="MethodInfo.h" />
-    <ClInclude Include="ModuleInfo.h" />
+    <ClInclude Include="Diagnostics\MethodInfo.h" />
+    <ClInclude Include="Diagnostics\ModuleInfo.h" />
     <ClInclude Include="Networking\Sockets.h" />
-    <ClInclude Include="Quaternion.h" />
-    <ClInclude Include="StackTrace.h" />
-    <ClInclude Include="SymbolHelper.h" />
-    <ClInclude Include="TypeInfo.h" />
-    <ClInclude Include="Vectors.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="Data Types\Quaternion.h" />
+    <ClInclude Include="Diagnostics\StackTrace.h" />
+    <ClInclude Include="Diagnostics\SymbolHelper.h" />
+    <ClInclude Include="Diagnostics\TypeInfo.h" />
+    <ClInclude Include="Data Types\Vectors.h" />
+    <ClInclude Include="Graphics\Window.h" />
+    <ClInclude Include="Networking\Web.h" />
+    <ClInclude Include="Text\Text Document\TextDocument.h" />
+    <ClInclude Include="Text\Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array\Array.cpp" />
@@ -181,17 +191,22 @@
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Exceptions\Exceptions.cpp" />
+    <ClCompile Include="HTML\HTML.cpp" />
+    <ClCompile Include="Injector.cpp" />
     <ClCompile Include="IO\IOExceptions.cpp" />
     <ClCompile Include="IO\File.cpp" />
+    <ClCompile Include="IO\TextFile.cpp" />
     <ClCompile Include="Math\Math.cpp" />
-    <ClCompile Include="MethodInfo.cpp" />
-    <ClCompile Include="ModuleInfo.cpp" />
+    <ClCompile Include="Diagnostics\MethodInfo.cpp" />
+    <ClCompile Include="Diagnostics\ModuleInfo.cpp" />
     <ClCompile Include="Networking\Sockets.cpp" />
-    <ClCompile Include="Quaternion.cpp" />
-    <ClCompile Include="StackTrace.cpp" />
-    <ClCompile Include="SymbolHelper.cpp" />
-    <ClCompile Include="Vectors.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Data Types\Quaternion.cpp" />
+    <ClCompile Include="Diagnostics\StackTrace.cpp" />
+    <ClCompile Include="Diagnostics\SymbolHelper.cpp" />
+    <ClCompile Include="Data Types\Vectors.cpp" />
+    <ClCompile Include="Graphics\Window.cpp" />
+    <ClCompile Include="Networking\Web.cpp" />
+    <ClCompile Include="Text\Text Document\TextDocument.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

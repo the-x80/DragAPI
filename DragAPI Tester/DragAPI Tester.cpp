@@ -13,6 +13,16 @@ int main()
 
     OutputDebugStringA(testString);
 
+    DragAPI::Window mainWindow = DragAPI::Window();
+    mainWindow.Create();
+
+    mainWindow.Show(true);
+
+
+
+
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

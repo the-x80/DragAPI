@@ -8,30 +8,36 @@
 #ifndef _WINDOWS_
 #include <Windows.h>
 #endif
-#ifndef ARRAY_H
-#include "Array/Array.h"
+#ifndef VECTOR_H
+#include <vector>
 #endif
+#include <string>
 
 namespace DragAPI{
 	namespace Diagnostics {
 		class StackTraceEntry {
 		public:
 			DWORD64 dw_Address;
-			//DebugMethodInfo* dmi_Method;
+			DebugMethodInfo dmi_Method;
+
+			std::string cstr_MethodName;
+			int n_ThreadID;
 		};
 		class StackTrace {
 		private:
+			HANDLE h_Process;
+			HANDLE h_Thread;
+			int n_ThreadID;
 		protected:
 
 		public:
-			HANDLE h_Process;
-			HANDLE h_Thread;
-			Array<StackTraceEntry> a_StackWalkEntries;
+			std::vector<StackTraceEntry> a_StackWalkEntries;
 
 			StackTrace();
 			StackTrace(int n_Skip);
 
-			void GenerateStackTrace(int n_Skip);
+			void Capture();
+			void Capture(int n_Skip);
 		};
 	}
 }

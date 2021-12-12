@@ -1,6 +1,9 @@
 #ifndef DRAG_API_FILE_H
 #define DRAG_API_FILE_H
 
+#include <array>
+#include <vector>
+
 #ifndef _WINDOWS_
 #include <Windows.h>
 #endif
@@ -32,9 +35,11 @@ namespace DragAPI {
 			long GetSize();
 
 			bool Read(void* buffer, int bufferSize);
+			bool Read(std::vector<BYTE>);
 			bool Read(Array<void>* buffer);
 
 			bool Write(void* buffer, int bufferSize);
+			bool Write(std::vector<BYTE>);
 			bool Write(Array<void>* buffer);
 		};
 

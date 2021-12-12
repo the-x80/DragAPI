@@ -5,7 +5,7 @@
 #pragma comment(lib, "DbgHelp.lib")
 
 #include "Debug.h"
-#include "StackTrace.h"
+#include "Diagnostics/Diagnostics.h"
 #include "DateTime.h"
 
 void DragAPI::Debug::BeginDebugGroup()

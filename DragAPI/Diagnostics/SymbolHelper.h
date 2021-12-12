@@ -1,6 +1,6 @@
 #ifndef SYMBOL_HELPER_H
 #define SYMBOL_HELPER_H
-#include "Exceptions/Exceptions.h"
+#include "../Exceptions/Exceptions.h"
 
 namespace DebugSymbolHelper {
 	static bool b_IsInitialized;

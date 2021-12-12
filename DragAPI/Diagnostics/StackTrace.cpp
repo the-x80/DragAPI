@@ -11,15 +11,20 @@
 //Perform cleanup on every failure.
 DragAPI::Diagnostics::StackTrace::StackTrace()
 {
-	this->GenerateStackTrace(1);
+	
 }
 
 DragAPI::Diagnostics::StackTrace::StackTrace(int n_Skip)
 {
-	this->GenerateStackTrace(1 + n_Skip);
+	
 }
 
-void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
+void DragAPI::Diagnostics::StackTrace::Capture()
+{
+	this->Capture(0);
+}
+
+void DragAPI::Diagnostics::StackTrace::Capture(int n_Skip)
 {
 #ifdef STACK_TRACE_DEBUG
 	char cstr_DebugMessage[1024];
@@ -27,11 +32,6 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 	wsprintf(cstr_DebugMessage, "%s started.\n", __func__);
 	OutputDebugString(cstr_DebugMessage);
 #endif
-	this->h_Process = GetCurrentProcess();
-	this->h_Thread = GetCurrentThread();
-
-
-
 	CONTEXT con_Context;
 #ifdef _M_IX86
 	ZeroMemory(&con_Context, sizeof(CONTEXT));
@@ -89,12 +89,15 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 
 
 	//EnterCriticalSection(&DbgHelpLock); Implement multithreading later
-	SymInitialize(GetCurrentProcess(), NULL, TRUE);
+	SymInitialize(this->h_Process, NULL, TRUE);
 
 	//Using for loop for more flexibility. Might be used in the future
+	this->h_Process = GetCurrentProcess();
+	this->h_Thread = GetCurrentThread();
+	this->n_ThreadID = GetCurrentThreadId();
 	for (int i=0;;i++) {
-		bool b_StackWalkResult = StackWalk64(dw_MachineType, GetCurrentProcess(),
-			GetCurrentThread(), &sf_StackFrame, &con_Context, NULL, SymFunctionTableAccess64,
+		bool b_StackWalkResult = StackWalk64(dw_MachineType, this->h_Process,
+			this->h_Thread, &sf_StackFrame, &con_Context, NULL, SymFunctionTableAccess64,
 			SymGetModuleBase64, NULL);
 
 		if (i <= n_Skip) {
@@ -104,7 +107,7 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 		if (b_StackWalkResult == false) {//StackWalk failed.
 			//This could happen if the end of the stack has been reached
 			//Or it could be that some other error has occured.
-			//GetLastError is not reliably set ba StackWalk64
+			//GetLastError is not reliably set by StackWalk64
 			//So debbuging here is pointless.
 
 			break;
@@ -116,25 +119,34 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 		//Most likely you will have to create a SymbolHelper class to manage all of this.
 		if (sf_StackFrame.AddrPC.Offset != 0) {
 			//Valid frame
-			SYMBOL_INFO* si_Info;
-			si_Info = (SYMBOL_INFO*)malloc(sizeof(si_Info) + 256);
+			int n_SymbolInfoSize = sizeof(SYMBOL_INFO) + 256;
+
+			SYMBOL_INFO* si_Info = (SYMBOL_INFO*)malloc(n_SymbolInfoSize);
 			if (si_Info == nullptr) {
-				SymCleanup(GetCurrentProcess());
+				free(si_Info);
+				SymCleanup(this->h_Process);
 				return;
 			}
-			ZeroMemory(si_Info, sizeof(si_Info) + 256);
+			ZeroMemory(si_Info, n_SymbolInfoSize);
 			si_Info->SizeOfStruct = sizeof(SYMBOL_INFO);
 			si_Info->MaxNameLen = 255;
 			DWORD64 dw_Displacement;
 
 			bool b_SymFrimAddeResult = SymFromAddr(this->h_Process, sf_StackFrame.AddrPC.Offset, &dw_Displacement, si_Info);
+			if (b_SymFrimAddeResult == FALSE) {
+				free(si_Info);
+				SymCleanup(this->h_Process);
+				return;
+			}
 
 
 			StackTraceEntry sf_Entry;
 			sf_Entry.dw_Address = sf_StackFrame.AddrPC.Offset;
-			//sf_Entry.dmi_Method = new DebugMethodInfo(sf_Entry.dw_Address, false);
+			sf_Entry.dmi_Method = DebugMethodInfo();
+			sf_Entry.cstr_MethodName = si_Info->Name;
+			sf_Entry.n_ThreadID = this->n_ThreadID;
 
-			this->a_StackWalkEntries.Add(sf_Entry);
+			this->a_StackWalkEntries.push_back(sf_Entry);
 			
 #ifdef STACK_TRACE_DEBUG
 			char cstr_DebugMessage[1024];
@@ -149,6 +161,6 @@ void DragAPI::Diagnostics::StackTrace::GenerateStackTrace(int n_Skip)
 		}
 	}
 
-	SymCleanup(GetCurrentProcess());
+	SymCleanup(this->h_Process);
 	//LeaveCriticalSection( &DbgHelpLock );
 }

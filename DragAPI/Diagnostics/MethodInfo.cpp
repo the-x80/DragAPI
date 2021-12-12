@@ -4,10 +4,10 @@
 
 #pragma comment(lib, "Dbghelp.lib")
 
-#include "Exceptions/Exceptions.h"
+#include "../Exceptions/Exceptions.h"
 #include "MethodInfo.h"
 
-MethodInfo::MethodInfo()
+DragAPI::Diagnostics::MethodInfo::MethodInfo()
 {
 	this->cstr_MethodName = nullptr;
 	this->n_ParameterCount = 0;
@@ -16,7 +16,7 @@ MethodInfo::MethodInfo()
 	this->m_Module = nullptr;
 }
 
-MethodInfo::MethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols)
+DragAPI::Diagnostics::MethodInfo::MethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols)
 {
 #ifdef _DEBUG
 	char cstr_DebugMessage[1024];
@@ -116,7 +116,7 @@ MethodInfo::MethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols)
 	}
 }
 
-MethodInfo::MethodInfo(SYMBOL_INFO* si_Info)
+DragAPI::Diagnostics::MethodInfo::MethodInfo(SYMBOL_INFO* si_Info)
 {
 	this->cstr_MethodName = nullptr;
 	this->n_ParameterCount = 0;
@@ -136,7 +136,7 @@ MethodInfo::MethodInfo(SYMBOL_INFO* si_Info)
 	strcpy(cstr_MethodName, si_Info->Name);
 }
 
-MethodInfo::~MethodInfo()
+DragAPI::Diagnostics::MethodInfo::~MethodInfo()
 {
 	if (this->cstr_MethodName != nullptr) {
 		delete[] this->cstr_MethodName;
@@ -144,7 +144,7 @@ MethodInfo::~MethodInfo()
 	}
 }
 
-DebugMethodInfo::DebugMethodInfo()
+DragAPI::Diagnostics::DebugMethodInfo::DebugMethodInfo()
 {
 	this->a_ParameterTypes = nullptr;
 	this->ti_ReturnType = nullptr;
@@ -154,7 +154,7 @@ DebugMethodInfo::DebugMethodInfo()
 	this->n_SourceFileLineNumber = 0;
 }
 
-DebugMethodInfo::DebugMethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols) :
+DragAPI::Diagnostics::DebugMethodInfo::DebugMethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols) :
 	MethodInfo::MethodInfo(dw_Address, b_InitializeSymbols)
 {
 	this->a_ParameterTypes = nullptr;
@@ -165,7 +165,7 @@ DebugMethodInfo::DebugMethodInfo(DWORD64 dw_Address, bool b_InitializeSymbols) :
 	this->n_SourceFileLineNumber = 0;
 }
 
-DebugMethodInfo::DebugMethodInfo(SYMBOL_INFO* si_Info) : MethodInfo::MethodInfo(si_Info)
+DragAPI::Diagnostics::DebugMethodInfo::DebugMethodInfo(SYMBOL_INFO* si_Info) : MethodInfo::MethodInfo(si_Info)
 {
 	this->a_ParameterTypes = nullptr;
 	this->ti_ReturnType = nullptr;
@@ -179,7 +179,7 @@ DebugMethodInfo::DebugMethodInfo(SYMBOL_INFO* si_Info) : MethodInfo::MethodInfo(
 	strcpy(this->cstr_MethodName, si_Info->Name);
 }
 
-DebugMethodInfo::~DebugMethodInfo()
+DragAPI::Diagnostics::DebugMethodInfo::~DebugMethodInfo()
 {
 }
 

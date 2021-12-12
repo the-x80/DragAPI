@@ -1,15 +1,13 @@
 #ifndef DRAG_API_STRING_H
 #define DRAG_API_STRING_H
 
-#include "../Array/Array.h"
+#include <vector>
+#include <array>
+#include <string>
+#include "../Text/Text.h"
+#include "../Array/Array.h"//Outdated
 
 namespace DragAPI {
-	enum class StringEncoding {
-		ANSI,
-		UTF8,
-		UTF16,
-		UTF32
-	};
 	class String {
 	private:
 		/// <summary>
@@ -19,6 +17,7 @@ namespace DragAPI {
 
 		/// <summary>
 		/// Holds the character data of the string.
+		/// Its the raw bytes so depending on the encoding the data held is different.
 		/// Must never be nullptr.
 		/// </summary>
 		unsigned char* pData;
@@ -31,7 +30,7 @@ namespace DragAPI {
 		/// <summary>
 		/// Holds information about the strings encoding.
 		/// </summary>
-		StringEncoding eEncoding;
+		DragAPI::Text::Encoding eEncoding;
 	public:
 		static const String& EmptyString;
 
@@ -85,6 +84,8 @@ namespace DragAPI {
 		String TrimRight(unsigned long ammount);
 
 		String Concat(String& other);
+
+		bool SetEncoding(DragAPI::Text::Encoding encoding);
 
 		/// <summary>
 		/// Checks this string against another one.

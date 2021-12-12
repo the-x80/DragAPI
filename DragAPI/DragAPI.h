@@ -9,36 +9,32 @@
 #include <Windows.h>
 #endif
 
-#include <d3d9.h>
-#include <d3d10_1.h>
-#include <d3d11.h>
-#include <d3d12.h>
-
-#pragma comment(lib, "d3d9.lib")
-#pragma comment(lib, "d3d10_1.lib")
-#pragma comment(lib, "d3d11.lib")
-#pragma comment(lib, "d3d12.lib")
+#include "Math/Math.h"
 
 #include "Data Types/String.h"
 
 #include "Exceptions/Exceptions.h"
 
-#include "StackTrace.h"
+#include "Diagnostics/Diagnostics.h"
 
 #include "Debug.h"
 
 #include "Array/Array.h"
 
 #include "DateTime.h"
-#include "Vectors.h"
-#include "Quaternion.h"
+#include "Data Types/Vectors.h"
+#include "Data Types/Quaternion.h"
 
 #include "DragAPI.Networking.h"
 
 #include "IO/IO.h"
 
-#include "Window.h"
+#include "Graphics/Graphics.h"
 
+#include "Injector.h"
+
+#include "Text/Text.h"
+#include "HTML/HTML.h"
 
 namespace DragAPI {
 	static const char version[5] = "0.1b";

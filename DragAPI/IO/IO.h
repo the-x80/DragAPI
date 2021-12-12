@@ -3,6 +3,7 @@
 
 #include "IOExceptions.h"
 #include "File.h"
+#include "TextFile.h"
 
 namespace DragAPI {
 	namespace IO {
