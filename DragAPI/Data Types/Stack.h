@@ -54,26 +54,36 @@ namespace DragAPI {
 		size_t maxDepth;
 		StackType stackType;
 	public:
-		Stack() {
-			this->stackData = new T[0];
-			this->stackCountAllocated = 0;
-			this->stackCountCurrent = 0;
-			this->stackType = StackType::LILO;
-		};
-		Stack(Stack& other) {
-			this->stackCountAllocated = other.stackCountAllocated;
-			this->stackCountCurrent = other.stackCountCurrent;
-			this->stackData = new T[this->stackCountAllocated];
+		Stack() :
+			stackData(new T[0]),
+			stackCountCurrent(0),
+			stackCountAllocated(0),
+			maxDepth(0),
+			stackType(StackType::LILO){};
+		Stack(Stack& other) :
+			stackData(malloc(sizeof(T)*other.stackCountAllocated)),
+			stackCountCurrent(other.stackCountCurrent),
+			stackCountAllocated(other.stackCountAllocated),
+			maxDepth(other.maxDepth),
+			stackType(other.stackType){
+
 			memcpy(this->stackData, other.stackData, other.stackCountAllocated);
 		};
 		Stack(Stack&& other) {};
-		Stack(size_t initialSize) {
-			stackCountCurrent = 0;
-			stackCountAllocated = initialSize;
-			stackData = new T[stackCountAllocated];
+		Stack(size_t initialSize) :
+			stackData(malloc(sizeof(T)*initialSize)),
+			stackCountCurrent(0),
+			stackCountAllocated(initialSize),
+			maxDepth(0),
+			stackType(StackType::LILO)
+		{
+			memset(this->stackData, 0, sizeof(T) * this->stackCountAllocated);
 		};
 		Stack(StackType type) {
-
+			this->stackData = new T[0];
+			this->stackCountAllocated = 0;
+			this->stackCountCurrent = 0;
+			this->stackType = type;
 		}
 		Stack(StackType type, size_t initialSize) {
 
@@ -86,9 +96,11 @@ namespace DragAPI {
 		};
 
 		void Push(T& element) {
-			if (this->stackCountCurrent >= this->maxDepth) {
-				//This should throw an exception
+			if (this->maxDepth != 0) {
+				if (this->stackCountCurrent >= this->maxDepth) {
+					//This should throw an exception
 
+				}
 			}
 
 			if (this->stackCountCurrent >= this->stackCountAllocated) {
