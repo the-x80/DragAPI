@@ -29,6 +29,7 @@
 #include "Data Types/Vectors.h"
 #include "Data Types/Quaternion.h"
 #include "Data Types/Rect.h"
+#include "Data Types/Stack.h"
 
 
 #include "DragAPI.Networking.h"

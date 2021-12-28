@@ -159,6 +159,7 @@
     <ClInclude Include="Data Types\Color.h" />
     <ClInclude Include="Data Types\Integers.h" />
     <ClInclude Include="Data Types\Rect.h" />
+    <ClInclude Include="Data Types\Stack.h" />
     <ClInclude Include="Data Types\String.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Debug.h" />
