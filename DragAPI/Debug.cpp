@@ -65,6 +65,11 @@ void DragAPI::Debug::Write(const wchar_t* msg, ...)
 {
 }
 
-void DragAPI::Debug::WroteLine(const wchar_t* msg, ...)
+void DragAPI::Debug::WriteLine(const wchar_t* msg, ...)
 {
+}
+
+void DragAPI::Debug::WriteException(::DragAPI::Exceptions::Exception& e)
+{
+
 }

@@ -1,5 +1,6 @@
 #ifndef DRAG_API_DEBUG_H
 #define DRAG_API_DEBUG_H
+#include "Exceptions/Exceptions.h"
 
 
 namespace DragAPI {
@@ -22,7 +23,9 @@ namespace DragAPI {
 		inline void WriteLine(const char* msg, ...);
 
 		inline void Write(const wchar_t* msg, ...);
-		inline void WroteLine(const wchar_t* msg, ...);
+		inline void WriteLine(const wchar_t* msg, ...);
+
+		inline void WriteException(::DragAPI::Exceptions::Exception& e);
 	}
 }
 

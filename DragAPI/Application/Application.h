@@ -1,8 +1,16 @@
 #pragma once
 #ifndef DRAG_API_APPLICATION_H
 #define DRAG_API_APPLICATION_H
+
+#include "../Graphics/GraphicsRenderingEngine.h"
+
 namespace DragAPI {
-	namespace Application {
+	class Application {
+	private:
+		static Application current;
+
+		
+	public:
 		enum class Platform {
 			Windows,
 			Linux,
@@ -16,13 +24,18 @@ namespace DragAPI {
 			RISC
 		};
 
+		GraphicsRenderingEngine* graphicsEngine;
 
 
-		static const Platform platform = Platform::Windows;
+		Platform platform;
+		Architecture architecture;
 
 
+		Application();
 
-		static const Architecture architecture = Architecture::x86;
-	}
+		inline static Application& Current() { return Application::current; };
+
+		void ProcessFrame();
+	};
 }
 #endif

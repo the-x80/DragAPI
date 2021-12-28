@@ -18,11 +18,12 @@ namespace DragAPI {
 		Injector(Injector&& other);
 		~Injector();
 
-
+		
 		void SetInjectedDLL(const char* fName);
 
 
 		void Inject();
+		void Inject(bool createProcess);
 	};
 }
 

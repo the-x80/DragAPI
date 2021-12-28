@@ -27,3 +27,8 @@ void DragAPI::Injector::SetInjectedDLL(const char* fName)
 void DragAPI::Injector::Inject()
 {
 }
+
+void DragAPI::Injector::Inject(bool createProcess)
+{
+
+}

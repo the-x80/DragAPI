@@ -15,7 +15,7 @@ DragAPI::String::String() :
 	length(0),
 	pData(new unsigned char[sizeof(char) * 0]),
 	nDataSize(0),
-	eEncoding(StringEncoding::UTF16)
+	eEncoding(DragAPI::Text::Encoding::UTF16)
 {
 }
 
@@ -23,7 +23,7 @@ DragAPI::String::String(const wchar_t* _text):
 	length(wcslen(_text)),
 	pData(new unsigned char[sizeof(wchar_t) * (this->length + 1)]),
 	nDataSize(sizeof(wchar_t)* (this->length + 1)),
-	eEncoding(StringEncoding::UTF16)
+	eEncoding(DragAPI::Text::Encoding::UTF16)
 {
 	memcpy(this->pData, _text, sizeof(wchar_t) * (this->length + 1));
 }
@@ -32,7 +32,7 @@ DragAPI::String::String(const char* _text):
 	length(strlen(_text)),
 	pData(new unsigned char[sizeof(char) * (this->length + 1)]),
 	nDataSize(sizeof(char)* (this->length + 1)),
-	eEncoding(StringEncoding::ANSI)
+	eEncoding(DragAPI::Text::Encoding::ANSI)
 {
 	memcpy(this->pData, _text, sizeof(char) * (this->length + 1));
 }
@@ -41,7 +41,7 @@ DragAPI::String::String(const Array<wchar_t>& charArray):
 	length(charArray.Length()),
 	pData(new unsigned char[sizeof(wchar_t) * (this->length + 1)]),
 	nDataSize(sizeof(wchar_t)* (this->length + 1)),
-	eEncoding(StringEncoding::UTF16)
+	eEncoding(DragAPI::Text::Encoding::UTF16)
 {
 	memcpy(this->pData, charArray.GetBufferPointer(), sizeof(wchar_t) * (this->length + 1));
 }
@@ -50,19 +50,19 @@ DragAPI::String::String(const Array<char>& charArray) :
 	length(charArray.Length()),
 	pData(new unsigned char[sizeof(char) * (this->length + 1)]),
 	nDataSize(sizeof(char)* (this->length + 1)),
-	eEncoding(StringEncoding::ANSI)
+	eEncoding(DragAPI::Text::Encoding::ANSI)
 {
 	memcpy(this->pData, charArray.GetBufferPointer(), sizeof(char) * (this->length + 1));
 }
 
 DragAPI::String::String(String& other)
 {
-	throw new Exceptions::NotImplementedException();
+	//throw new Exceptions::NotImplementedException();
 }
 
 DragAPI::String::String(String&& other) noexcept
 {
-	throw new Exceptions::NotImplementedException();
+	//throw new Exceptions::NotImplementedException();
 }
 
 DragAPI::String::~String()
@@ -81,16 +81,16 @@ DragAPI::Array<char> DragAPI::String::ToCharArray() const
 	char* data = new char[this->length+1];
 	memset(data, 0, sizeof(char) * (this->length + 1));
 	switch (this->eEncoding) {
-	case StringEncoding::ANSI:
+	case DragAPI::Text::Encoding::ANSI:
 		memcpy(data, this->pData, sizeof(char) * (this->length + 1));
 		break;
-	case StringEncoding::UTF8:
+	case DragAPI::Text::Encoding::UTF8:
 		throw new Exceptions::NotImplementedException();
 		break;
-	case StringEncoding::UTF16:
+	case DragAPI::Text::Encoding::UTF16:
 		throw new Exceptions::NotImplementedException();
 		break;
-	case StringEncoding::UTF32:
+	case DragAPI::Text::Encoding::UTF32:
 		throw new Exceptions::NotImplementedException();
 		break;
 	}
@@ -184,16 +184,16 @@ DragAPI::String::operator char*() const
 	memset(convertedString, 0, sizeof(char) * (this->length + 1));
 
 	switch (this->eEncoding) {
-	case StringEncoding::ANSI:
+	case DragAPI::Text::Encoding::ANSI:
 		memcpy(convertedString, this->pData, sizeof(char) * (this->length + 1));
 		break;
-	case StringEncoding::UTF8:
+	case DragAPI::Text::Encoding::UTF8:
 		throw new Exceptions::NotImplementedException();
 		break;
-	case StringEncoding::UTF16:
+	case DragAPI::Text::Encoding::UTF16:
 		wcstombs(convertedString, (wchar_t*)this->pData, this->length);
 		break;
-	case StringEncoding::UTF32:
+	case DragAPI::Text::Encoding::UTF32:
 		throw new Exceptions::NotImplementedException();
 		break;
 	}
@@ -205,17 +205,17 @@ DragAPI::String::operator wchar_t*() const
 	wchar_t* convertedString = new wchar_t[this->length+1];
 	memset(convertedString, 0, sizeof(wchar_t) * (this->length + 1));
 	switch (this->eEncoding) {
-	case StringEncoding::ANSI:
+	case DragAPI::Text::Encoding::ANSI:
 		mbstowcs(convertedString, (const char*)this->pData, this->length);
 		break;
-	case StringEncoding::UTF8:
+	case DragAPI::Text::Encoding::UTF8:
 		throw new Exceptions::NotImplementedException();
 		//mbstowcs(convertedString, (const char*)this->pData, this->length);
 		break;
-	case StringEncoding::UTF16:
+	case DragAPI::Text::Encoding::UTF16:
 		memcpy(convertedString, this->pData, sizeof(wchar_t) * (this->length + 1));
 		break;
-	case StringEncoding::UTF32:
+	case DragAPI::Text::Encoding::UTF32:
 		throw new Exceptions::NotImplementedException();
 		break;
 	}

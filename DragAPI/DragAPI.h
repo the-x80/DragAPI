@@ -1,4 +1,7 @@
 #pragma once
+#ifndef DRAG_API_H
+#define DRAG_API_H
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,8 +25,11 @@
 #include "Array/Array.h"
 
 #include "DateTime.h"
+#include "Data Types/Color.h"
 #include "Data Types/Vectors.h"
 #include "Data Types/Quaternion.h"
+#include "Data Types/Rect.h"
+
 
 #include "DragAPI.Networking.h"
 
@@ -33,9 +39,16 @@
 
 #include "Injector.h"
 
+#include "Crypto/Crypto.h"
+
 #include "Text/Text.h"
 #include "HTML/HTML.h"
 
+#include "Graphics/GraphicsRenderingEngine.h"
+
+#include "Application/Application.h"
+
 namespace DragAPI {
-	static const char version[5] = "0.1b";
+	static const char APIVersion[5] = "0.1b";
 }
+#endif

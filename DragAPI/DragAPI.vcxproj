@@ -72,9 +72,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -153,7 +155,10 @@
   <ItemGroup>
     <ClInclude Include="Application\Application.h" />
     <ClInclude Include="Array\Array.h" />
+    <ClInclude Include="Crypto\Crypto.h" />
+    <ClInclude Include="Data Types\Color.h" />
     <ClInclude Include="Data Types\Integers.h" />
+    <ClInclude Include="Data Types\Rect.h" />
     <ClInclude Include="Data Types\String.h" />
     <ClInclude Include="DateTime.h" />
     <ClInclude Include="Debug.h" />
@@ -164,6 +169,7 @@
     <ClInclude Include="Exceptions\Exceptions.h" />
     <ClInclude Include="Graphics\Graphics.h" />
     <ClInclude Include="Diagnostics\InfoObject.h" />
+    <ClInclude Include="Graphics\GraphicsRenderingEngine.h" />
     <ClInclude Include="HTML\HTML.h" />
     <ClInclude Include="Injector.h" />
     <ClInclude Include="IO\IOExceptions.h" />
@@ -186,11 +192,15 @@
     <ClInclude Include="Text\Text.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Application\Application.cpp" />
     <ClCompile Include="Array\Array.cpp" />
+    <ClCompile Include="Data Types\Color.cpp" />
+    <ClCompile Include="Data Types\Rect.cpp" />
     <ClCompile Include="Data Types\String.cpp" />
     <ClCompile Include="DateTime.cpp" />
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Exceptions\Exceptions.cpp" />
+    <ClCompile Include="Graphics\GraphicsRenderingEngine.cpp" />
     <ClCompile Include="HTML\HTML.cpp" />
     <ClCompile Include="Injector.cpp" />
     <ClCompile Include="IO\IOExceptions.cpp" />

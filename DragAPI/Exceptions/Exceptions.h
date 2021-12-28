@@ -32,6 +32,8 @@ namespace DragAPI {
 			Exception(const char* msg) noexcept;
 			~Exception() noexcept;
 
+			const char* what() const override;
+
 			virtual char* ToString();
 		protected:
 			void PrintToOutput();

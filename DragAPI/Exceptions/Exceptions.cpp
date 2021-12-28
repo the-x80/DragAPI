@@ -78,7 +78,7 @@ DragAPI::Exceptions::Exception::Exception(const char* msg) noexcept
 {
 	n_WindowsLastErrorCode = GetLastError();
 
-	int n_MessageLength = strlen(msg);
+	size_t n_MessageLength = strlen(msg);
 	try {
 		this->message = new char[n_MessageLength + 1];
 	}
@@ -103,6 +103,11 @@ DragAPI::Exceptions::Exception::~Exception()
 	delete[] this->message;
 	delete[] this->cstr_FullMessage;
 	delete this->stackTrace;
+}
+
+const char* DragAPI::Exceptions::Exception::what() const
+{
+	return "Unhandeled exception";
 }
 
 char* DragAPI::Exceptions::Exception::ToString()
