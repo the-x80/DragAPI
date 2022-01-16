@@ -10,6 +10,17 @@ namespace DragAPI {
 #else
 		static bool isDebugBuild = false;
 #endif
+		enum class DebugOutputMode {
+			None = 0,
+			DebugOutput,
+			ConsoleOutput,
+			WindowOutput
+		};
+
+
+
+		void SetDebugOutput(DebugOutputMode mode);
+
 		inline void BeginDebugGroup();
 		inline void EndDebugGroup();
 

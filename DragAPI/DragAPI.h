@@ -7,9 +7,11 @@
 #include <stdlib.h>
 #include <iostream>
 
-#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
-#ifndef _WINDOWS_
-#include <Windows.h>
+#ifdef _WIN32
+	#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+	#ifndef _WINDOWS_
+		#include <Windows.h>
+	#endif
 #endif
 
 #include "Math/Math.h"
@@ -30,6 +32,10 @@
 #include "Data Types/Quaternion.h"
 #include "Data Types/Rect.h"
 #include "Data Types/Stack.h"
+
+#include "Event System/EventSystem.h"
+
+#include "Localisation/Localisation.h"
 
 
 #include "DragAPI.Networking.h"
@@ -52,4 +58,16 @@
 namespace DragAPI {
 	static const char APIVersion[5] = "0.1b";
 }
+
+
+
+
+#ifdef _WIN32
+	#define APPLICATION_ENTRY_POINT int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+#else
+	#define APPLICATION_ENTRY_POINT main()
+#endif
+
+
+
 #endif

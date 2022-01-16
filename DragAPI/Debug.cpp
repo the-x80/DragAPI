@@ -1,12 +1,76 @@
 #include <stdio.h>
+#include <iostream>
+#include <string>
+#include <functional>
+#include <array>
+#include <vector>
+
 #include <Windows.h>
 #include <DbgHelp.h>
 
 #pragma comment(lib, "DbgHelp.lib")
 
+#include "Graphics/Window.h"
+#include "Console/Console.h"
+
 #include "Debug.h"
 #include "Diagnostics/Diagnostics.h"
 #include "DateTime.h"
+
+
+namespace DragAPI {
+	namespace Debug {
+		DebugOutputMode CurrentDebugOutputMode = DebugOutputMode::DebugOutput;
+
+		class DebugWindow : BaseWindow<DebugWindow> {
+		public:
+			DebugWindow() {
+
+			}
+			DebugWindow(DebugWindow& other) {
+
+			}
+			DebugWindow(DebugWindow&& other) noexcept {
+
+			}
+			~DebugWindow() {
+
+			}
+		};
+	}
+}
+
+
+
+void DragAPI::Debug::SetDebugOutput(DebugOutputMode mode)
+{
+	if (mode == CurrentDebugOutputMode) {//No change has been made therefore just exit.
+		return;
+	}
+
+	CurrentDebugOutputMode = mode;
+
+	switch (mode) {
+	case DebugOutputMode::None:
+		break;
+	case DebugOutputMode::DebugOutput:
+		break;
+	case DebugOutputMode::ConsoleOutput:
+	{
+		//Perform a check to see if the console is already opened.
+		if (Console::IsConsoleOpen() == true) {
+			break;
+		}
+
+		//TODO: Implement error checking and exception handling.
+		Console::Allocate();
+	}
+		break;
+	case DebugOutputMode::WindowOutput:
+
+		break;
+	}
+}
 
 void DragAPI::Debug::BeginDebugGroup()
 {

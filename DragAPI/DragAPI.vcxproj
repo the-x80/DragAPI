@@ -155,9 +155,11 @@
   <ItemGroup>
     <ClInclude Include="Application\Application.h" />
     <ClInclude Include="Array\Array.h" />
+    <ClInclude Include="Console\Console.h" />
     <ClInclude Include="Crypto\Crypto.h" />
     <ClInclude Include="Data Types\Color.h" />
     <ClInclude Include="Data Types\Integers.h" />
+    <ClInclude Include="Data Types\Queue.h" />
     <ClInclude Include="Data Types\Rect.h" />
     <ClInclude Include="Data Types\Stack.h" />
     <ClInclude Include="Data Types\String.h" />
@@ -167,6 +169,8 @@
     <ClInclude Include="Diagnostics\Profiling\Profiling.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="DragAPI.Networking.h" />
+    <ClInclude Include="Event System\Callback.h" />
+    <ClInclude Include="Event System\EventSystem.h" />
     <ClInclude Include="Exceptions\Exceptions.h" />
     <ClInclude Include="Graphics\Graphics.h" />
     <ClInclude Include="Diagnostics\InfoObject.h" />
@@ -178,6 +182,9 @@
     <ClInclude Include="IO\IO.h" />
     <ClInclude Include="IO\TextFile.h" />
     <ClInclude Include="Json\Json.h" />
+    <ClInclude Include="Localisation\Language.h" />
+    <ClInclude Include="Localisation\Localisation.h" />
+    <ClInclude Include="Localisation\LocalisedString.h" />
     <ClInclude Include="Math\Math.h" />
     <ClInclude Include="Diagnostics\MethodInfo.h" />
     <ClInclude Include="Diagnostics\ModuleInfo.h" />
@@ -195,6 +202,7 @@
   <ItemGroup>
     <ClCompile Include="Application\Application.cpp" />
     <ClCompile Include="Array\Array.cpp" />
+    <ClCompile Include="Console\Console.cpp" />
     <ClCompile Include="Data Types\Color.cpp" />
     <ClCompile Include="Data Types\Rect.cpp" />
     <ClCompile Include="Data Types\String.cpp" />
@@ -207,6 +215,8 @@
     <ClCompile Include="IO\IOExceptions.cpp" />
     <ClCompile Include="IO\File.cpp" />
     <ClCompile Include="IO\TextFile.cpp" />
+    <ClCompile Include="Localisation\Language.cpp" />
+    <ClCompile Include="Localisation\LocalisedString.cpp" />
     <ClCompile Include="Math\Math.cpp" />
     <ClCompile Include="Diagnostics\MethodInfo.cpp" />
     <ClCompile Include="Diagnostics\ModuleInfo.cpp" />

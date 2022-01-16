@@ -6,7 +6,7 @@ DragAPI::IO::File::File() :
 	cstrFileName()
 {
 	n_size = 0;
-	hFile = (HFILE)INVALID_HANDLE_VALUE;
+	hFile = INVALID_HANDLE_VALUE;
 	b_isFileOpen = false;
 }
 
@@ -15,7 +15,7 @@ DragAPI::IO::File::File(const char* cstr_fName):
 {
 	
 	n_size = 0;
-	hFile = (HFILE)INVALID_HANDLE_VALUE;
+	hFile = INVALID_HANDLE_VALUE;
 	b_isFileOpen = false;
 }
 
@@ -28,9 +28,9 @@ DragAPI::IO::File::~File()
 
 bool DragAPI::IO::File::Open()
 {
-	this->hFile = (HFILE)CreateFile(this->cstrFileName, GENERIC_READ | GENERIC_WRITE,
+	this->hFile = CreateFile(this->cstrFileName, GENERIC_READ | GENERIC_WRITE,
 		FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
-	if (this->hFile == (HFILE)INVALID_HANDLE_VALUE) {
+	if (this->hFile == INVALID_HANDLE_VALUE) {
 
 	}
 	return false;
@@ -38,7 +38,7 @@ bool DragAPI::IO::File::Open()
 
 bool DragAPI::IO::File::Close()
 {
-	CloseHandle((HANDLE)this->hFile);
+	CloseHandle(this->hFile);
 	return false;
 }
 

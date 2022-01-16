@@ -18,7 +18,7 @@ namespace DragAPI {
 		class File {
 		private:
 			String cstrFileName;
-			HFILE hFile;
+			HANDLE hFile;
 
 			long n_size;
 
