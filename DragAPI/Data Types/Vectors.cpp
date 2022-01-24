@@ -3,13 +3,16 @@
 #include <math.h>
 namespace DragAPI {
 
-	Vector::Vector()
-	{
-	}
-
 	Vector3::Vector3()
 	{
 		x = y = z = 0.0f;
+	}
+
+	Vector3::Vector3(Vector<float, 3> other)
+	{
+		x = other[0];
+		y = other[1];
+		z = other[2];
 	}
 
 	Vector3::Vector3(float _x, float _y, float _z)
@@ -17,6 +20,17 @@ namespace DragAPI {
 		x = _x;
 		y = _y;
 		z = _z;
+	}
+
+	Vector3::Vector3(Vector3& other)
+	{
+		x = other.x;
+		y = other.y;
+		z = other.z;
+	}
+
+	Vector3::Vector3(Vector3&& other)
+	{
 	}
 
 	Vector3 Vector3::Normalized()
@@ -81,6 +95,11 @@ namespace DragAPI {
 	{
 
 		return !((this->x == other.x) && (this->y == other.x) && (this->z == other.z));
+	}
+
+	Vector3::operator Vector<float, 3>()
+	{
+		return Vector<float, 3>(this->x, this->y, this->z);
 	}
 
 	Vector3Float::Vector3Float()
