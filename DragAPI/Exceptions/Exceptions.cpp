@@ -1,4 +1,5 @@
 #include "Exceptions.h"
+#ifdef _WIN32
 #ifdef _WIN32_WINNT
 #undef _WIN32_WINNT
 #endif
@@ -6,15 +7,13 @@
 #define _WIN32_WINNT 0x0400
 
 #include <Windows.h>
+#include <TlHelp32.h>
 #include <DbgHelp.h>
 
 #pragma comment(lib, "Dbghelp.lib")
+#endif
 
-#include "../Array/Array.h"
 #include "../Diagnostics/Diagnostics.h"
-
-#include <vector>
-#include <string>
 
 
 
@@ -60,8 +59,6 @@ DragAPI::Exceptions::Exception::Exception() noexcept
 	this->message = new char[0];
 	this->cstr_FullMessage = new char[0];
 
-	this->e_InnerException = nullptr;
-
 	this->n_SourceFileLine = 0;
 
 	//Note StackTrace does not have full functionality for now.
@@ -90,8 +87,6 @@ DragAPI::Exceptions::Exception::Exception(const char* msg) noexcept
 	this->cstr_FullMessage = new char[0];
 
 	this->stackTrace = new DragAPI::Diagnostics::StackTrace(1);
-
-	this->e_InnerException = nullptr;
 
 	//this->mi_Method = DebugMethodInfo();
 

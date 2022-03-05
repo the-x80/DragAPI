@@ -196,6 +196,8 @@
     <ClInclude Include="Data Types\Vectors.h" />
     <ClInclude Include="Graphics\Window.h" />
     <ClInclude Include="Networking\Web.h" />
+    <ClInclude Include="Physics\Physics.h" />
+    <ClInclude Include="Physics\PhysicsEngine.h" />
     <ClInclude Include="Text\Text Document\TextDocument.h" />
     <ClInclude Include="Text\Text.h" />
   </ItemGroup>
@@ -227,6 +229,7 @@
     <ClCompile Include="Data Types\Vectors.cpp" />
     <ClCompile Include="Graphics\Window.cpp" />
     <ClCompile Include="Networking\Web.cpp" />
+    <ClCompile Include="Physics\PhysicsEngine.cpp" />
     <ClCompile Include="Text\Text Document\TextDocument.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

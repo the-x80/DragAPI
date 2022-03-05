@@ -8,6 +8,10 @@
 #include "../Array/Array.h"//Outdated
 
 namespace DragAPI {
+	class CStringA;
+	class CStringW;
+
+
 	class String {
 	private:
 		/// <summary>
@@ -97,6 +101,35 @@ namespace DragAPI {
 
 		operator char*() const;
 		operator wchar_t*() const;
+
+	};
+
+	
+
+
+	class CStringA {
+	private:
+		char* data;
+		size_t reservedSpace;
+		size_t stringLength;
+	public:
+		CStringA();
+		CStringA(const char* str);
+		CStringA(CStringW& other);
+		CStringA(CStringA& other);
+		CStringA(CStringA&& other);
+		~CStringA();
+
+
+		void ReserveSize(size_t size);
+
+
+		size_t Length();
+	};
+	class CStringW {
+	private:
+		wchar_t* data;
+	public:
 
 	};
 }

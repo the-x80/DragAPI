@@ -3,11 +3,22 @@
 #include <stdexcept>
 #include <exception>
 
+#include <array>
+#include <vector>
+#include <string>
+
+#ifdef _DEBUG
+#define _DEBUG_EXCEPTIONS
+#endif
+
 namespace DragAPI {
 	namespace Diagnostics {
 		class StackTrace;
 	}
 	namespace Exceptions {
+		/// <summary>
+		/// Base class for all exceptions
+		/// </summary>
 		class Exception : public std::exception {
 		protected:
 			/// <summary>
@@ -23,9 +34,6 @@ namespace DragAPI {
 			/// Describes the method that the exception was thrown in.
 			/// </summary>
 			//DebugMethodInfo mi_Method;
-
-			Exception* e_InnerException;
-
 			int n_WindowsLastErrorCode;
 		public:
 			Exception() noexcept;
@@ -38,6 +46,7 @@ namespace DragAPI {
 		protected:
 			void PrintToOutput();
 		};
+		
 		class NullPointerException : public Exception {
 		public:
 			NullPointerException() noexcept;

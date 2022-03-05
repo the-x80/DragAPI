@@ -1,6 +1,10 @@
 #ifndef DRAG_API_WINDOW_H
 #define DRAG_API_WINDOW_H
 
+#include <array>
+#include <vector>
+#include <string>
+
 #ifndef _WINDOWS_
 #include <Windows.h>
 #endif
@@ -20,9 +24,19 @@ namespace DragAPI {
 		private:
 			BaseWindow<T>* window;
 		public:
-			WindowException() noexcept : window(nullptr), Exception() {};
+			WindowException() noexcept : window(nullptr), Exception() {}
+			WindowException(BaseWindow<T> wnd) noexcept : window(wnd), Exception() {
+
+			}
 
 			const char* what() const override{
+				return "";
+			}
+		};
+		template <class T> class InvalidHandleException : public WindowException<T> {
+		public:
+			InvalidHandleException() noexcept : WindowException<T>(), Exception() {}
+			InvalidHandleException(BaseWindow<T> wnd) noexcept : WindowException(wnd), Exception() {
 
 			}
 		};
@@ -41,6 +55,10 @@ namespace DragAPI {
 	template <class T> class BaseWindow {
 	private:
 	protected:
+		/// <summary>
+		/// Holds the handle to the window.
+		/// Its set to INVALID_HANDLE_VALUE if the window is not created.
+		/// </summary>
 		HWND m_hwnd;
 		MSG msg;
 		RectInt rect;
@@ -61,11 +79,6 @@ namespace DragAPI {
 			else
 			{
 				pThis = (T*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
-			}
-
-			switch (uMsg) {
-			default:
-				break;
 			}
 
 			if (pThis != nullptr)
@@ -90,7 +103,7 @@ namespace DragAPI {
 
 			ATOM a_RegClass = RegisterClass(&wc);
 			if (a_RegClass == 0) {
-				//Registering of class has failed.
+				//Class registration failed
 			}
 
 			m_hwnd = CreateWindowEx(
@@ -131,6 +144,9 @@ namespace DragAPI {
 
 		RectInt ClientRect() {};
 		RectInt ClientRect(RectInt r) {};
+
+		inline void Show() { ShowWindow(this->m_hwnd, 1); }
+		inline void Hide() { ShowWindow(this->m_hwnd, 0); }
 	protected:
 		virtual PCWSTR  ClassName() const = 0;
 		virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam) = 0;
