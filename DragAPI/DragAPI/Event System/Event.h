@@ -8,7 +8,7 @@
 namespace DragAPI {
 	namespace Events {
 		enum class EventClass {
-
+			None
 		};
 		enum class EventType {
 			None,//Should never happen.
