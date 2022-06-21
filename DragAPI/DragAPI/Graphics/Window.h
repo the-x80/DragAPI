@@ -32,7 +32,7 @@ namespace DragAPI {
 	public:
 		static Window* Create(const char* tittle, Rect<int> rect);
 
-		virtual void Initialize() = 0;
+		virtual void Initialize(const wchar_t* tittle, Rect<int> rect) = 0;
 		virtual void Destroy() = 0;
 
 		virtual void Show() = 0;

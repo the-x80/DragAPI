@@ -9,7 +9,7 @@
 #endif
 
 #ifdef _DEBUG
-#define DRAG_API_ASSERT(x, ...) if(x==false){printf(...);__debugbreak();}
+#define DRAG_API_ASSERT(x, ...) if((x)==false){printf(__VA_ARGS__);__debugbreak();}
 #else
 #define DRAG_API_ASSERT(x, ...)
 #endif
