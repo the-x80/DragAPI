@@ -5,15 +5,15 @@
 namespace DragAPI {
 	template <class T> class Rect {
 	private:
+		
+	public:
 		T xMin, xMax;
 		T yMin, yMax;
-	public:
-		Rect(): xMin(0), xMax(0), yMin(0), yMax(0) {};
-	};
+		inline Rect(): xMin(0), xMax(0), yMin(0), yMax(0) {};
+		inline Rect(xmin, ymin, xmax, ymax) : xMin(xmin), xMax(xmax), yMin(ymin), yMax(ymax) {};
 
-	class RectInt : public Rect<int> {
-	public:
-		RectInt();
+		inline T Width() { return xMax - yMin };
+		inline T Height() { return yMax - yMin };
 	};
 }
 
