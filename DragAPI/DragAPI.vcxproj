@@ -167,6 +167,7 @@
     <ClInclude Include="DragAPI\Debug.h" />
     <ClInclude Include="DragAPI\Diagnostics\Diagnostics.h" />
     <ClInclude Include="DragAPI\Diagnostics\Profiling\Profiling.h" />
+    <ClInclude Include="DragAPI\DragAPI.Core.h" />
     <ClInclude Include="DragAPI\DragAPI.Entry.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="DragAPI\DragAPI.Networking.h" />
