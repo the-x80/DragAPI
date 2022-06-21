@@ -21,7 +21,13 @@
 
 namespace DragAPI {
 	LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
-
+		switch (msg) {
+		case WM_CREATE:
+			OutputDebugString(TEXT("Window created"));
+			break;
+		default:
+			break;
+		}
 		return DefWindowProc(hwnd, msg, wParam, lParam);
 	}
 
@@ -32,8 +38,10 @@ namespace DragAPI {
 
 
 		WindowsWindow():
-		m_Handle(INVALID_HANDLE_VALUE)
+			m_Handle(INVALID_HANDLE_VALUE),
+			m_WindowClass()
 		{
+			
 
 		}
 
@@ -60,8 +68,6 @@ namespace DragAPI {
 
 			this->m_Handle = CreateWindowEx(WS_EX_ACCEPTFILES, m_WindowClass.lpszClassName, tittle, WS_OVERLAPPEDWINDOW | WS_CAPTION, rect.xMin, rect.yMin, rect.Width(), rect.Height(), NULL, NULL, m_WindowClass.hInstance, NULL);
 			DRAG_API_ASSERT(this->m_Handle != NULL, "CreateWindowEx failed. GetLastError = %d", GetLastError());
-
-
 		}
 
 		void Destroy() override {
@@ -74,11 +80,22 @@ namespace DragAPI {
 		void Hide() override {
 			ShowWindow((HWND)this->m_Handle, SW_HIDE);
 		}
+
+		void Process() override {
+			MSG msg;
+			ZeroMemory(&msg, sizeof(msg));
+			while (::PeekMessage(&msg, (HWND)this->m_Handle, 0, 0, PM_REMOVE)) {
+				TranslateMessage(&msg);
+				DispatchMessage(&msg);
+			}
+		}
 	};
 
 
-	Window* Window::Create(const char* tittle, Rect<int> rect) {
-		return new WindowsWindow();
+	Window* Window::Create(const wchar_t* tittle, Rect<int> rect) {
+		Window* retVal = new WindowsWindow();
+		retVal->Initialize(tittle, rect);
+		return retVal;
 	}
 }
 #endif
