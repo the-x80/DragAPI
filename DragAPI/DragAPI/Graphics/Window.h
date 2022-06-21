@@ -151,7 +151,7 @@ namespace DragAPI {
 		virtual PCWSTR  ClassName() const = 0;
 		virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam) = 0;
 	};
-
+	/*
 	class Window : public BaseWindow<Window> {
 	public:
 		PCWSTR  ClassName() const { return L"Default Window Class"; }
@@ -160,6 +160,18 @@ namespace DragAPI {
 		Window();
 		
 		void Show(bool value);
+	};
+	*/
+
+	class Window {
+	protected:
+		Window();
+		~Window();
+	public:
+		static Window* Create();
+
+		virtual void Show();
+		virtual void Hide();
 	};
 }
 
