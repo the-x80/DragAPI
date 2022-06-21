@@ -192,6 +192,9 @@
     <ClInclude Include="DragAPI\DragAPI.Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DragAPI\Array\Array.cpp">
@@ -305,5 +308,8 @@
     <ClCompile Include="DragAPI\Event System\Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

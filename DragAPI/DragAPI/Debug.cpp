@@ -24,21 +24,6 @@ namespace DragAPI {
 	namespace Debug {
 		DebugOutputMode CurrentDebugOutputMode = DebugOutputMode::DebugOutput;
 
-		class DebugWindow : public BaseWindow<DebugWindow> {
-		public:
-			DebugWindow() {
-
-			}
-			DebugWindow(DebugWindow& other) {
-
-			}
-			DebugWindow(DebugWindow&& other) noexcept {
-
-			}
-			~DebugWindow() {
-
-			}
-		};
 		Debugger::Debugger()
 		{
 		}
