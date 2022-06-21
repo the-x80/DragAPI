@@ -1,0 +1,9 @@
+#pragma once
+#ifndef DRAG_API_PLATFORM_DEFINITIONS_H
+#define DRAG_API_PLATFORM_DEFINITIONS_H
+
+
+
+
+
+#endif

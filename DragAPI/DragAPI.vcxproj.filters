@@ -18,231 +18,288 @@
     <ClInclude Include="DragAPI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Array\Array.h">
+    <ClInclude Include="DragAPI\Array\Array.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Exceptions\Exceptions.h">
+    <ClInclude Include="DragAPI\Exceptions\Exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\MethodInfo.h">
+    <ClInclude Include="DragAPI\Diagnostics\MethodInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\ModuleInfo.h">
+    <ClInclude Include="DragAPI\Diagnostics\ModuleInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\StackTrace.h">
+    <ClInclude Include="DragAPI\Diagnostics\StackTrace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\SymbolHelper.h">
+    <ClInclude Include="DragAPI\Diagnostics\SymbolHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\InfoObject.h">
+    <ClInclude Include="DragAPI\Diagnostics\InfoObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\TypeInfo.h">
+    <ClInclude Include="DragAPI\Diagnostics\TypeInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\Window.h">
+    <ClInclude Include="DragAPI\Graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Debug.h">
+    <ClInclude Include="DragAPI\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DateTime.h">
+    <ClInclude Include="DragAPI\DateTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Vectors.h">
+    <ClInclude Include="DragAPI\Data Types\Vectors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Quaternion.h">
+    <ClInclude Include="DragAPI\Data Types\Quaternion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DragAPI.Networking.h">
+    <ClInclude Include="DragAPI\DragAPI.Networking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Networking\Sockets.h">
+    <ClInclude Include="DragAPI\Networking\Sockets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Json\Json.h">
+    <ClInclude Include="DragAPI\Json\Json.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\IO.h">
+    <ClInclude Include="DragAPI\IO\IO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\File.h">
+    <ClInclude Include="DragAPI\IO\File.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\IOExceptions.h">
+    <ClInclude Include="DragAPI\IO\IOExceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\String.h">
+    <ClInclude Include="DragAPI\Data Types\String.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Integers.h">
+    <ClInclude Include="DragAPI\Data Types\Integers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Math\Math.h">
+    <ClInclude Include="DragAPI\Math\Math.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\Graphics.h">
+    <ClInclude Include="DragAPI\Graphics\Graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Application\Application.h">
+    <ClInclude Include="DragAPI\Application\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\Diagnostics.h">
+    <ClInclude Include="DragAPI\Diagnostics\Diagnostics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Diagnostics\Profiling\Profiling.h">
+    <ClInclude Include="DragAPI\Diagnostics\Profiling\Profiling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IO\TextFile.h">
+    <ClInclude Include="DragAPI\IO\TextFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Injector.h">
+    <ClInclude Include="DragAPI\Injector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Networking\Web.h">
+    <ClInclude Include="DragAPI\Networking\Web.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HTML\HTML.h">
+    <ClInclude Include="DragAPI\HTML\HTML.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Text\Text Document\TextDocument.h">
+    <ClInclude Include="DragAPI\Text\Text Document\TextDocument.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Text\Text.h">
+    <ClInclude Include="DragAPI\Text\Text.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Crypto\Crypto.h">
+    <ClInclude Include="DragAPI\Crypto\Crypto.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Rect.h">
+    <ClInclude Include="DragAPI\Data Types\Rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics\GraphicsRenderingEngine.h">
+    <ClInclude Include="DragAPI\Graphics\GraphicsRenderingEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Color.h">
+    <ClInclude Include="DragAPI\Data Types\Color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Stack.h">
+    <ClInclude Include="DragAPI\Data Types\Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Console\Console.h">
+    <ClInclude Include="DragAPI\Console\Console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Event System\EventSystem.h">
+    <ClInclude Include="DragAPI\Callback.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Event System\Callback.h">
+    <ClInclude Include="DragAPI\Data Types\Queue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Types\Queue.h">
+    <ClInclude Include="DragAPI\Localisation\Localisation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Localisation\Localisation.h">
+    <ClInclude Include="DragAPI\Localisation\Language.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Localisation\Language.h">
+    <ClInclude Include="DragAPI\Localisation\LocalisedString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Localisation\LocalisedString.h">
+    <ClInclude Include="DragAPI\Physics\Physics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Physics\Physics.h">
+    <ClInclude Include="DragAPI\Physics\PhysicsEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Physics\PhysicsEngine.h">
+    <ClInclude Include="DragAPI\Networking\Exceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Networking\HTTPClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Networking\WebBrowser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\DragAPI.PlatformDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Networking\Platform_Windows\SocketWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Networking\Platform_Windows\WebWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\DragAPI.Threading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\DragAPI.Entry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Event System\EventSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Event System\Event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Event System\KeyboardEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\KeyCodes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Array\Array.cpp">
+    <ClCompile Include="DragAPI\Array\Array.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Exceptions\Exceptions.cpp">
+    <ClCompile Include="DragAPI\Exceptions\Exceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Diagnostics\MethodInfo.cpp">
+    <ClCompile Include="DragAPI\Diagnostics\MethodInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Diagnostics\ModuleInfo.cpp">
+    <ClCompile Include="DragAPI\Diagnostics\ModuleInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Diagnostics\StackTrace.cpp">
+    <ClCompile Include="DragAPI\Diagnostics\StackTrace.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Diagnostics\SymbolHelper.cpp">
+    <ClCompile Include="DragAPI\Diagnostics\SymbolHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics\Window.cpp">
+    <ClCompile Include="DragAPI\Graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug.cpp">
+    <ClCompile Include="DragAPI\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DateTime.cpp">
+    <ClCompile Include="DragAPI\DateTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Types\Vectors.cpp">
+    <ClCompile Include="DragAPI\Data Types\Vectors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Types\Quaternion.cpp">
+    <ClCompile Include="DragAPI\Data Types\Quaternion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Networking\Sockets.cpp">
+    <ClCompile Include="DragAPI\Networking\Sockets.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\File.cpp">
+    <ClCompile Include="DragAPI\IO\File.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\IOExceptions.cpp">
+    <ClCompile Include="DragAPI\IO\IOExceptions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Types\String.cpp">
+    <ClCompile Include="DragAPI\Data Types\String.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Math\Math.cpp">
+    <ClCompile Include="DragAPI\Math\Math.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IO\TextFile.cpp">
+    <ClCompile Include="DragAPI\IO\TextFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Injector.cpp">
+    <ClCompile Include="DragAPI\Injector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Networking\Web.cpp">
+    <ClCompile Include="DragAPI\Networking\Web.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HTML\HTML.cpp">
+    <ClCompile Include="DragAPI\HTML\HTML.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Text\Text Document\TextDocument.cpp">
+    <ClCompile Include="DragAPI\Text\Text Document\TextDocument.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Types\Rect.cpp">
+    <ClCompile Include="DragAPI\Data Types\Rect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Application\Application.cpp">
+    <ClCompile Include="DragAPI\Application\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Types\Color.cpp">
+    <ClCompile Include="DragAPI\Data Types\Color.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Console\Console.cpp">
+    <ClCompile Include="DragAPI\Console\Console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Localisation\Language.cpp">
+    <ClCompile Include="DragAPI\Localisation\Language.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Localisation\LocalisedString.cpp">
+    <ClCompile Include="DragAPI\Localisation\LocalisedString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphics\GraphicsRenderingEngine.cpp">
+    <ClCompile Include="DragAPI\Graphics\GraphicsRenderingEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Physics\PhysicsEngine.cpp">
+    <ClCompile Include="DragAPI\Physics\PhysicsEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Networking\HTTPClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Networking\WebBrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\IO\Platform_Windows\File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Networking\Platform_Windows\SocketWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Networking\Platform_Windows\WebWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\DragAPI.Threading.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\Event.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

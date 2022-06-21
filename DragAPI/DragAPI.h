@@ -10,64 +10,60 @@
 #ifdef _WIN32
 	#define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 	#ifndef _WINDOWS_
+
+/*
+* Developer notes:
+*	The windows header file should not be included since everything will be abstracted trough various classes.
+*	Currently its included to provide functionality not yet implemented inside this API
+*/
 		#include <Windows.h>
 	#endif
 #endif
 
-#include "Math/Math.h"
+#include "DragAPI/Math/Math.h"
 
-#include "Data Types/String.h"
+#include "DragAPI/Data Types/String.h"
 
-#include "Exceptions/Exceptions.h"
+#include "DragAPI/Exceptions/Exceptions.h"
 
-#include "Diagnostics/Diagnostics.h"
+#include "DragAPI/Diagnostics/Diagnostics.h"
 
-#include "Debug.h"
+#include "DragAPI/Debug.h"
 
-#include "Array/Array.h"
+#include "DragAPI/Array/Array.h"
 
-#include "DateTime.h"
-#include "Data Types/Color.h"
-#include "Data Types/Vectors.h"
-#include "Data Types/Quaternion.h"
-#include "Data Types/Rect.h"
-#include "Data Types/Stack.h"
+#include "DragAPI/DateTime.h"
+#include "DragAPI/Data Types/Color.h"
+#include "DragAPI/Data Types/Vectors.h"
+#include "DragAPI/Data Types/Quaternion.h"
+#include "DragAPI/Data Types/Rect.h"
+#include "DragAPI/Data Types/Stack.h"
 
-#include "Event System/EventSystem.h"
+#include "DragAPI/KeyCodes.h"
 
-#include "Localisation/Localisation.h"
+#include "DragAPI/Event System/EventSystem.h"
 
-
-#include "DragAPI.Networking.h"
-
-#include "IO/IO.h"
-
-#include "Graphics/Graphics.h"
-
-#include "Injector.h"
-
-#include "Crypto/Crypto.h"
-
-#include "Text/Text.h"
-#include "HTML/HTML.h"
-
-#include "Graphics/GraphicsRenderingEngine.h"
-
-#include "Application/Application.h"
-
-namespace DragAPI {
-	static const char APIVersion[5] = "0.1b";
-}
+#include "DragAPI/Localisation/Localisation.h"
 
 
+#include "DragAPI/DragAPI.Networking.h"
 
+#include "DragAPI/IO/IO.h"
 
-#ifdef _WIN32
-	#define APPLICATION_ENTRY_POINT int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
-#else
-	#define APPLICATION_ENTRY_POINT main()
-#endif
+#include "DragAPI/Graphics/Graphics.h"
 
+#include "DragAPI/Injector.h"
 
+#include "DragAPI/Crypto/Crypto.h"
 
+#include "DragAPI/Text/Text.h"
+#include "DragAPI/HTML/HTML.h"
+
+#include "DragAPI/Graphics/GraphicsRenderingEngine.h"
+
+#include "DragAPI/Application/Application.h"
+
+#include "DragAPI/Physics/Physics.h"
+
+#include "DragAPI/DragAPI.Entry.h"
 #endif
