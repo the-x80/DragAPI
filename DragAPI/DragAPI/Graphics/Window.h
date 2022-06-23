@@ -28,9 +28,12 @@ namespace DragAPI {
 		Rect<int> m_WindowRect;
 
 		Window():m_WindowRect() {};
-		~Window() {};
+		
 	public:
-		static Window* Create(const wchar_t* tittle, Rect<int> rect);
+		~Window() {};
+
+
+		static Window* Create(const wchar_t* tittle, Rect<int> rect, DragAPI::Events::EventDispatcher* dispatcher);
 
 		virtual void Initialize(const wchar_t* tittle, Rect<int> rect) = 0;
 		virtual void Destroy() = 0;
@@ -39,6 +42,8 @@ namespace DragAPI {
 		virtual void Hide() = 0;
 
 		virtual void Process() = 0;
+
+		virtual void SetEventDispatcher(DragAPI::Events::EventDispatcher* e) = 0;
 	};
 
 	namespace Exceptions {

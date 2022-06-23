@@ -174,7 +174,9 @@
     <ClInclude Include="DragAPI\DragAPI.PlatformDefinitions.h" />
     <ClInclude Include="DragAPI\DragAPI.Threading.h" />
     <ClInclude Include="DragAPI\Callback.h" />
+    <ClInclude Include="DragAPI\Event System\ApplicationEvents.h" />
     <ClInclude Include="DragAPI\Event System\Event.h" />
+    <ClInclude Include="DragAPI\Event System\EventExceptions.h" />
     <ClInclude Include="DragAPI\Event System\EventSystem.h" />
     <ClInclude Include="DragAPI\Event System\KeyboardEvents.h" />
     <ClInclude Include="DragAPI\Exceptions\Exceptions.h" />
@@ -213,6 +215,7 @@
     <ClInclude Include="DragAPI\Physics\PhysicsEngine.h" />
     <ClInclude Include="DragAPI\Text\Text Document\TextDocument.h" />
     <ClInclude Include="DragAPI\Text\Text.h" />
+    <ClInclude Include="DragAPI\Types\Types.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DragAPI\Application\Application.cpp" />
@@ -226,6 +229,9 @@
     <ClCompile Include="DragAPI\Debug.cpp" />
     <ClCompile Include="DragAPI\DragAPI.Threading.cpp" />
     <ClCompile Include="DragAPI\Event System\Event.cpp" />
+    <ClCompile Include="DragAPI\Event System\EventExceptions.cpp" />
+    <ClCompile Include="DragAPI\Event System\EventSystem.cpp" />
+    <ClCompile Include="DragAPI\Event System\KeyboardEvents.cpp" />
     <ClCompile Include="DragAPI\Exceptions\Exceptions.cpp" />
     <ClCompile Include="DragAPI\Graphics\GraphicsRenderingEngine.cpp" />
     <ClCompile Include="DragAPI\HTML\HTML.cpp" />
@@ -252,6 +258,7 @@
     <ClCompile Include="DragAPI\Networking\WebBrowser.cpp" />
     <ClCompile Include="DragAPI\Physics\PhysicsEngine.cpp" />
     <ClCompile Include="DragAPI\Text\Text Document\TextDocument.cpp" />
+    <ClCompile Include="DragAPI\Types\Types.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

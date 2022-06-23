@@ -22,7 +22,7 @@
 
 #include "DragAPI/Math/Math.h"
 
-#include "DragAPI/Data Types/String.h"
+#include "DragAPI/Types/Types.h"
 
 #include "DragAPI/Exceptions/Exceptions.h"
 
@@ -38,6 +38,7 @@
 #include "DragAPI/Data Types/Quaternion.h"
 #include "DragAPI/Data Types/Rect.h"
 #include "DragAPI/Data Types/Stack.h"
+#include "DragAPI/Data Types/String.h"
 
 #include "DragAPI/KeyCodes.h"
 

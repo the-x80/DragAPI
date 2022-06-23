@@ -195,6 +195,15 @@
     <ClInclude Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DragAPI\Event System\EventExceptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Event System\ApplicationEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Types\Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DragAPI\Array\Array.cpp">
@@ -306,6 +315,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\Event System\Event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\EventExceptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\EventSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\KeyboardEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Types\Types.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

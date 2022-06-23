@@ -9,13 +9,15 @@
 #include "../Event System/EventSystem.h"
 
 namespace DragAPI {
-	class Application
+	class Application : public DragAPI::Events::IEventListener
 	{
 	private:
 		std::wstring m_AppName;
 		
-	protected:
 		
+	protected:
+		DragAPI::Events::EventDispatcher* m_EventDispatcher;
+		bool m_Running;
 		
 	public:
 		Application();
@@ -39,6 +41,11 @@ namespace DragAPI {
 		/// Must be implemented by a derrived class
 		/// </summary>
 		virtual void Run() = 0;
+
+
+		virtual void OnEvent(DragAPI::Events::Event* e) override {
+
+		}
 	};
 }
 #endif
