@@ -242,6 +242,9 @@
     <ClCompile Include="DragAPI\Event System\KeyboardEvents.cpp" />
     <ClCompile Include="DragAPI\Event System\WindowEvents.cpp" />
     <ClCompile Include="DragAPI\Exceptions\Exceptions.cpp" />
+    <ClCompile Include="DragAPI\Graphics\Platform\Direct3D\Direct3DRenderer.cpp" />
+    <ClCompile Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="DragAPI\Graphics\Renderer.cpp" />
     <ClCompile Include="DragAPI\HTML\HTML.cpp" />
     <ClCompile Include="DragAPI\Injector.cpp" />
     <ClCompile Include="DragAPI\IO\IOExceptions.cpp" />

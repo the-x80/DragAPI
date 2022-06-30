@@ -5,11 +5,12 @@
 namespace DragAPI {
 	class Color {
 	private:
-		float red, green, blue, alpha;
+		
 	public:
+		float red, green, blue, alpha;
 		Color();
 		Color(Color& other);
-		Color(Color&& other);
+		Color(Color&& other) noexcept;
 		Color(float r, float g, float b);
 		Color(float r, float g, float b, float a);
 		~Color();
