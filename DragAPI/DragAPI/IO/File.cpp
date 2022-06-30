@@ -1,7 +1,5 @@
 #include "File.h"
 
-#include "../Debug.h"
-
 DragAPI::IO::File::File() :
 	cstrFileName()
 {

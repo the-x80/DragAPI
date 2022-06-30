@@ -45,8 +45,6 @@ namespace DragAPI {
 		String();
 		String(const wchar_t* _text);
 		String(const char* _text);
-		String(const Array<wchar_t>& charArray);
-		String(const Array<char>& charArray);
 
 		String(String& other);
 		String(String&& other) noexcept;
@@ -59,17 +57,6 @@ namespace DragAPI {
 		/// <returns>Length of the String</returns>
 		unsigned long Length() const;
 
-		/// <summary>
-		/// Converts this string to a char array.
-		/// </summary>
-		/// <returns>An Array object populated with char data from the string.</returns>
-		Array<char> ToCharArray() const;
-		/// <summary>
-		/// Converts this string to a wide char array.
-		/// </summary>
-		/// <returns>An Array object populated with wide char data from the string.</returns>
-		Array<wchar_t> ToWCharArray() const;
-
 		wchar_t& GetWCharAtIndex(unsigned long index);
 		char& GetCharAtIndex(unsigned long index);
 
@@ -77,9 +64,6 @@ namespace DragAPI {
 		bool Contains(String& other);
 		bool ContainsWord(String& other);
 		unsigned int Find(String& other);
-
-		Array<String> Split(const char delimiter);
-		Array<String> Split(String& delimiters);
 
 		String PadLeft(unsigned long ammount, const char character);
 		String PadRight(unsigned long ammount, const char character);
@@ -134,28 +118,28 @@ namespace DragAPI {
 	};
 
 
-	class string : public std::string {
+	class string : public ::std::string {
 	public:
 		string();
 		string(const char* cstr);
 		~string();
 
-		void format(std::string& format, ...);
+		void format(::std::string& format, ...);
 
-		int find(std::string& token);
-		std::vector<int> find_all(std::string& token);
+		int find(::std::string& token);
+		::std::vector<int> find_all(::std::string& token);
 
-		void replace(std::string& token, std::string& replace);
-		void replace_all(std::string& token, std::string& replace);
+		void replace(::std::string& token, ::std::string& replace);
+		void replace_all(::std::string& token, ::std::string& replace);
 
-		std::vector<std::string> split(const char delimiter, int startindex=0);
+		::std::vector<::std::string> split(const char delimiter, int startindex=0);
 
 		int parse_int(size_t startPos, size_t length);
 		int parse_float(size_t startPos, size_t length);
 
-		std::wstring& convert_to_wstring();
+		::std::wstring& convert_to_wstring();
 	};
-	class wstring : public std::wstring {
+	class wstring : public ::std::wstring {
 
 	};
 }

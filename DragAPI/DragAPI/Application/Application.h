@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
+
 #include "../Exceptions/Exceptions.h"
 
 #include "../Event System/EventSystem.h"
@@ -44,7 +45,7 @@ namespace DragAPI {
 
 
 		virtual void OnEvent(DragAPI::Events::Event* e) override {
-
+			//_CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, "DragAPI::Application has recieved an event of type %s\n", e->GetName());
 		}
 	};
 }

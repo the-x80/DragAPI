@@ -37,24 +37,6 @@ DragAPI::String::String(const char* _text):
 	memcpy(this->pData, _text, sizeof(char) * (this->length + 1));
 }
 
-DragAPI::String::String(const Array<wchar_t>& charArray):
-	length(charArray.Length()),
-	pData(new unsigned char[sizeof(wchar_t) * (this->length + 1)]),
-	nDataSize(sizeof(wchar_t)* (this->length + 1)),
-	eEncoding(DragAPI::Text::Encoding::UTF16)
-{
-	memcpy(this->pData, charArray.GetBufferPointer(), sizeof(wchar_t) * (this->length + 1));
-}
-
-DragAPI::String::String(const Array<char>& charArray) :
-	length(charArray.Length()),
-	pData(new unsigned char[sizeof(char) * (this->length + 1)]),
-	nDataSize(sizeof(char)* (this->length + 1)),
-	eEncoding(DragAPI::Text::Encoding::ANSI)
-{
-	memcpy(this->pData, charArray.GetBufferPointer(), sizeof(char) * (this->length + 1));
-}
-
 DragAPI::String::String(String& other)
 {
 	//throw new Exceptions::NotImplementedException();
@@ -74,34 +56,6 @@ DragAPI::String::~String()
 unsigned long DragAPI::String::Length() const
 {
 	return this->length;
-}
-
-DragAPI::Array<char> DragAPI::String::ToCharArray() const
-{
-	char* data = new char[this->length+1];
-	memset(data, 0, sizeof(char) * (this->length + 1));
-	switch (this->eEncoding) {
-	case DragAPI::Text::Encoding::ANSI:
-		memcpy(data, this->pData, sizeof(char) * (this->length + 1));
-		break;
-	case DragAPI::Text::Encoding::UTF8:
-		throw new Exceptions::NotImplementedException();
-		break;
-	case DragAPI::Text::Encoding::UTF16:
-		throw new Exceptions::NotImplementedException();
-		break;
-	case DragAPI::Text::Encoding::UTF32:
-		throw new Exceptions::NotImplementedException();
-		break;
-	}
-	Array<char> returnValue = Array<char>(data, sizeof(char) * (this->length + 1));
-	return returnValue;
-}
-
-DragAPI::Array<wchar_t> DragAPI::String::ToWCharArray() const
-{
-	throw new Exceptions::NotImplementedException();
-	return Array<wchar_t>();
 }
 
 wchar_t& DragAPI::String::GetWCharAtIndex(unsigned long index)
@@ -128,18 +82,6 @@ unsigned int DragAPI::String::Find(String& other)
 {
 	throw new Exceptions::NotImplementedException();
 	return 0;
-}
-
-DragAPI::Array<DragAPI::String> DragAPI::String::Split(const char delimiter)
-{
-	throw new Exceptions::NotImplementedException();
-	return Array<String>();
-}
-
-DragAPI::Array<DragAPI::String> DragAPI::String::Split(String& delimiters)
-{
-	throw new Exceptions::NotImplementedException();
-	return Array<String>();
 }
 
 DragAPI::String DragAPI::String::PadLeft(unsigned long ammount, const char character)

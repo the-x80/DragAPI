@@ -11,9 +11,7 @@ namespace DragAPI{
 
 #include "Networking/Sockets.h"
 #include "Networking/Web.h"
-#include "Networking/HTTPClient.h"
 
-#include "Networking/WebBrowser.h"
 
 
 #endif

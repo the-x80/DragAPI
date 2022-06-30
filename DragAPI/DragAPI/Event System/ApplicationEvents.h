@@ -11,19 +11,35 @@ namespace DragAPI {
 			ApplicationEvent();
 		};
 
-		class ApplicationStart : public ApplicationEvent {
+		class ApplicationStartEvent : public ApplicationEvent {
 		public:
-			ApplicationStart();
+			ApplicationStartEvent();
+
+			DRAG_API_EVENTS_TYPE(ApplicationStart);
 		};
 
-		class ApplicationTick : public ApplicationEvent {
+		class ApplicationTickEvent : public ApplicationEvent {
 		public:
-			ApplicationTick();
+			ApplicationTickEvent();
+
+			DRAG_API_EVENTS_TYPE(ApplicationTick);
 		};
 
-		class ApplicationQuit : public ApplicationEvent {
+		class ApplicationRequestQuitEvent : public ApplicationEvent {
 		public:
-			ApplicationQuit();
+			int m_ExitCode;
+
+
+			ApplicationRequestQuitEvent();
+			ApplicationRequestQuitEvent(int exitCode);
+
+			DRAG_API_EVENTS_TYPE(ApplicationRequestQuit);
+		};
+		class ApplicationQuitEvent : public ApplicationEvent {
+		public:
+			ApplicationQuitEvent();
+
+			DRAG_API_EVENTS_TYPE(ApplicationQuit);
 		};
 	}
 }

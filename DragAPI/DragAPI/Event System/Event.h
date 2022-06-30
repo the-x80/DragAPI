@@ -22,10 +22,12 @@ namespace DragAPI {
 			//Application event types
 			ApplicationStart,
 			ApplicationTick,
+			ApplicationRequestQuit,
 			ApplicationQuit,//Set when a quit message is sent
 			//Window event types
 			WindowCreate,
 			WindowPaint,
+			WindowClose,
 			WindowDestroy,
 			WindowMinimize,
 			WindowMaximize,

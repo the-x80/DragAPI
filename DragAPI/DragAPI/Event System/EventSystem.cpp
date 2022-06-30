@@ -1,6 +1,5 @@
 #include <Windows.h>
 #include "EventSystem.h"
-#include "../Debug.h"
 
 DragAPI::Events::EventDispatcher::EventDispatcher()
 {
@@ -14,7 +13,7 @@ DragAPI::Events::EventDispatcher::~EventDispatcher()
 
 void DragAPI::Events::EventDispatcher::PushEvent(Event* e)
 {
-	_CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, "Pushed %s to the event stack.\n", e->GetName());
+	//_CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, "Pushed %s to the event stack.\n", e->GetName());
 	this->m_QueuedEvents.push(e);
 }
 
@@ -40,6 +39,9 @@ void DragAPI::Events::EventDispatcher::UnregisterIEventListener(IEventListener* 
 void DragAPI::Events::EventDispatcher::DispatchEvent(Event* e)
 {
 	for (int i = 0; i < this->m_EventListeners.size(); i++) {
+		//_CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, "Dispatching an event of type %s to a IEventListener @ %p\n", e->GetName(), this->m_EventListeners[i].m_Listener);
 		this->m_EventListeners[i].m_Listener->OnEvent(e);
+		//_CrtDbgReport(_CRT_WARN, NULL, NULL, NULL, "Event of type %s has been handeled by IEventListener @ %p\n", e->GetName(), this->m_EventListeners[i].m_Listener);
+		delete e;
 	}
 }

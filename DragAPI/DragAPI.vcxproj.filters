@@ -45,9 +45,6 @@
     <ClInclude Include="DragAPI\Graphics\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DragAPI\Debug.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DragAPI\DateTime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -120,9 +117,6 @@
     <ClInclude Include="DragAPI\Data Types\Rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DragAPI\Graphics\GraphicsRenderingEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DragAPI\Data Types\Color.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -156,12 +150,6 @@
     <ClInclude Include="DragAPI\Networking\Exceptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DragAPI\Networking\HTTPClient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DragAPI\Networking\WebBrowser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DragAPI\DragAPI.PlatformDefinitions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -169,9 +157,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DragAPI\Networking\Platform_Windows\WebWindows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DragAPI\DragAPI.Threading.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DragAPI\DragAPI.Entry.h">
@@ -204,6 +189,33 @@
     <ClInclude Include="DragAPI\Types\Types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DragAPI\Event System\WindowEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Threading\Threading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Debugging\Debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Exceptions\Platform\Windows\ExceptionsWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Debugging\Logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Data Types\DateTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Graphics\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\Graphics\Platform\Direct3D\Direct3DRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DragAPI\Array\Array.cpp">
@@ -225,9 +237,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\Graphics\Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DragAPI\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\DateTime.cpp">
@@ -287,16 +296,7 @@
     <ClCompile Include="DragAPI\Localisation\LocalisedString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DragAPI\Graphics\GraphicsRenderingEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DragAPI\Physics\PhysicsEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DragAPI\Networking\HTTPClient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DragAPI\Networking\WebBrowser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI.cpp">
@@ -309,9 +309,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\Networking\Platform_Windows\WebWindows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DragAPI\DragAPI.Threading.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\Event System\Event.cpp">
@@ -327,6 +324,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DragAPI\Types\Types.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\ApplicationEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Event System\WindowEvents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Threading\Platform\ThreadingWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Debugging\Platform\Windows\LoggingWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\Data Types\Platform\Windows\DateTime Windows.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

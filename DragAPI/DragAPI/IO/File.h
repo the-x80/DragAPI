@@ -17,7 +17,7 @@ namespace DragAPI {
 	namespace IO {
 		class File {
 		private:
-			String cstrFileName;
+			::DragAPI::String cstrFileName;
 			HANDLE hFile;
 
 			long n_size;
@@ -36,11 +36,9 @@ namespace DragAPI {
 
 			bool Read(void* buffer, int bufferSize);
 			bool Read(std::vector<BYTE>);
-			bool Read(Array<void>* buffer);
 
 			bool Write(void* buffer, int bufferSize);
 			bool Write(std::vector<BYTE>);
-			bool Write(Array<void>* buffer);
 		};
 
 
@@ -60,19 +58,14 @@ namespace DragAPI {
 			bool SetCursorPosition(long position);
 
 			BYTE ReadByte();
-			Array<BYTE> ReadByteArray(long count);
 
 			short ReadShort();
-			Array<short> ReadShortArray(long count);
 
 			int ReadInt();
-			Array<int> ReadIntArray(long count);
 
 			long ReadLong();
-			Array<long> ReadLongArray(long count);
 
 			float ReadFloat();
-			Array<float> ReadFloatArray(long count);
 		};
 	}
 }

@@ -1,7 +1,6 @@
 #define WIN32_LEAN_AND_MEAN
 #define _WINSOCK_DEPRECATED_NO_WARNINGS
 
-#include "../../Debug.h"
 #include "../../Diagnostics/StackTrace.h"
 #include "WebWindows.h"
 
@@ -14,28 +13,6 @@
 #include <WS2tcpip.h>
 #pragma comment(lib, "Ws2_32.lib")
 #endif
-
-
-#define DEBUG_STRING_BUFFER_SIZE 2048*128
-#define DEBUG_LOG(msg, ...){\
-	wchar_t* l_DebugString = new wchar_t[DEBUG_STRING_BUFFER_SIZE];\
-	memset(l_DebugString, 0, sizeof(wchar_t)*DEBUG_STRING_BUFFER_SIZE);\
-	SYSTEMTIME systime;\
-	GetSystemTime(&systime);\
-	OutputDebugString(L"============================================================================================\n");\
-	wsprintf(l_DebugString, msg, __VA_ARGS__);\
-	OutputDebugString(l_DebugString);\
-	OutputDebugString(L"\n");\
-	DragAPI::Diagnostics::StackTrace st;\
-	st.Capture(1);\
-	char* l_StackTraceString = new char[DEBUG_STRING_BUFFER_SIZE];\
-	memset(l_StackTraceString, 0, sizeof(char)*DEBUG_STRING_BUFFER_SIZE);\
-	sprintf_s(l_StackTraceString, DEBUG_STRING_BUFFER_SIZE, "ThreadID:%d\nStack Trace:\n%s", GetCurrentThreadId(), st.ToString().c_str());\
-	OutputDebugStringA(l_StackTraceString);\
-	OutputDebugString(L"============================================================================================\n");\
-	delete[] l_DebugString;\
-	delete[] l_StackTraceString;\
-	}
 
 
 DragAPI::Networking::NetworkClientWindows::NetworkClientWindows()
@@ -146,8 +123,6 @@ void DragAPI::Networking::NetworkClientWindows::Connect(AddressFamily af, const 
 	default:
 		break;
 	}
-
-	DEBUG_LOG(L"Connecting.\n");
 	
 
 	char* l_PortString = new char[512];
@@ -177,20 +152,15 @@ void DragAPI::Networking::NetworkClientWindows::Connect(AddressFamily af, const 
 	int i = 0;
 	for (ADDRINFOEXA* ptr = result; ptr != NULL; ptr = ptr->ai_next) {
 		//Resolving the addresses.
-        DEBUG_LOG(L"GetAddrInfoEx response %d\n", i++);
-        DEBUG_LOG(L"\tFlags: 0x%x\n", ptr->ai_flags);
 		switch (ptr->ai_family) {
 		case AF_UNSPEC:
-			DEBUG_LOG(L"Unspecified\n");
 			break;
 		case AF_INET:
-			DEBUG_LOG(L"AF_INET (IPv4)\n");
 			// the InetNtop function is available on Windows Vista and later
 			{
 				
 				wchar_t* l_IPString = new wchar_t[46];
 				InetNtop(AF_INET, &((struct sockaddr_in*)ptr->ai_addr)->sin_addr, l_IPString, 46);
-				DEBUG_LOG(L"Address:%ws", l_IPString);
 				delete [] l_IPString;
 			}
 
@@ -208,13 +178,11 @@ void DragAPI::Networking::NetworkClientWindows::Connect(AddressFamily af, const 
 			l_AddressFamily = AF_INET;
 			break;
 		case AF_INET6:
-			DEBUG_LOG(L"AF_INET6 (IPv6)\n");
 			// the InetNtop function is available on Windows Vista and later
 			{
 
 				wchar_t* l_IPString = new wchar_t[46];
 				InetNtop(AF_INET6, &((struct sockaddr_in6*)ptr->ai_addr)->sin6_addr, l_IPString, 46);
-				DEBUG_LOG(L"Address:%ws", l_IPString);
 				delete[] l_IPString;
 			}
 
@@ -232,7 +200,6 @@ void DragAPI::Networking::NetworkClientWindows::Connect(AddressFamily af, const 
 			l_AddressFamily = AF_INET6;
 			break;
 		default:
-			DEBUG_LOG(L"Other %ld\n", ptr->ai_family);
 			break;
 		}
 	}

@@ -72,17 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -158,32 +160,37 @@
     <ClInclude Include="DragAPI\Console\Console.h" />
     <ClInclude Include="DragAPI\Crypto\Crypto.h" />
     <ClInclude Include="DragAPI\Data Types\Color.h" />
+    <ClInclude Include="DragAPI\Data Types\DateTime.h" />
     <ClInclude Include="DragAPI\Data Types\Integers.h" />
     <ClInclude Include="DragAPI\Data Types\Queue.h" />
     <ClInclude Include="DragAPI\Data Types\Rect.h" />
     <ClInclude Include="DragAPI\Data Types\Stack.h" />
     <ClInclude Include="DragAPI\Data Types\String.h" />
     <ClInclude Include="DragAPI\DateTime.h" />
-    <ClInclude Include="DragAPI\Debug.h" />
+    <ClInclude Include="DragAPI\Debugging\Debug.h" />
+    <ClInclude Include="DragAPI\Debugging\Logging.h" />
     <ClInclude Include="DragAPI\Diagnostics\Diagnostics.h" />
+    <ClInclude Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.h" />
     <ClInclude Include="DragAPI\Diagnostics\Profiling\Profiling.h" />
     <ClInclude Include="DragAPI\DragAPI.Core.h" />
     <ClInclude Include="DragAPI\DragAPI.Entry.h" />
     <ClInclude Include="DragAPI.h" />
     <ClInclude Include="DragAPI\DragAPI.Networking.h" />
     <ClInclude Include="DragAPI\DragAPI.PlatformDefinitions.h" />
-    <ClInclude Include="DragAPI\DragAPI.Threading.h" />
     <ClInclude Include="DragAPI\Callback.h" />
     <ClInclude Include="DragAPI\Event System\ApplicationEvents.h" />
     <ClInclude Include="DragAPI\Event System\Event.h" />
     <ClInclude Include="DragAPI\Event System\EventExceptions.h" />
     <ClInclude Include="DragAPI\Event System\EventSystem.h" />
     <ClInclude Include="DragAPI\Event System\KeyboardEvents.h" />
+    <ClInclude Include="DragAPI\Event System\WindowEvents.h" />
     <ClInclude Include="DragAPI\Exceptions\Exceptions.h" />
+    <ClInclude Include="DragAPI\Exceptions\Platform\Windows\ExceptionsWindows.h" />
     <ClInclude Include="DragAPI\Graphics\Graphics.h" />
     <ClInclude Include="DragAPI\Diagnostics\InfoObject.h" />
-    <ClInclude Include="DragAPI\Graphics\GraphicsRenderingEngine.h" />
+    <ClInclude Include="DragAPI\Graphics\Platform\Direct3D\Direct3DRenderer.h" />
     <ClInclude Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="DragAPI\Graphics\Renderer.h" />
     <ClInclude Include="DragAPI\HTML\HTML.h" />
     <ClInclude Include="DragAPI\Injector.h" />
     <ClInclude Include="DragAPI\IO\IOExceptions.h" />
@@ -199,7 +206,6 @@
     <ClInclude Include="DragAPI\Diagnostics\MethodInfo.h" />
     <ClInclude Include="DragAPI\Diagnostics\ModuleInfo.h" />
     <ClInclude Include="DragAPI\Networking\Exceptions.h" />
-    <ClInclude Include="DragAPI\Networking\HTTPClient.h" />
     <ClInclude Include="DragAPI\Networking\Platform_Windows\SocketWindows.h" />
     <ClInclude Include="DragAPI\Networking\Platform_Windows\WebWindows.h" />
     <ClInclude Include="DragAPI\Networking\Sockets.h" />
@@ -210,11 +216,11 @@
     <ClInclude Include="DragAPI\Data Types\Vectors.h" />
     <ClInclude Include="DragAPI\Graphics\Window.h" />
     <ClInclude Include="DragAPI\Networking\Web.h" />
-    <ClInclude Include="DragAPI\Networking\WebBrowser.h" />
     <ClInclude Include="DragAPI\Physics\Physics.h" />
     <ClInclude Include="DragAPI\Physics\PhysicsEngine.h" />
     <ClInclude Include="DragAPI\Text\Text Document\TextDocument.h" />
     <ClInclude Include="DragAPI\Text\Text.h" />
+    <ClInclude Include="DragAPI\Threading\Threading.h" />
     <ClInclude Include="DragAPI\Types\Types.h" />
   </ItemGroup>
   <ItemGroup>
@@ -223,17 +229,19 @@
     <ClCompile Include="DragAPI\Array\Array.cpp" />
     <ClCompile Include="DragAPI\Console\Console.cpp" />
     <ClCompile Include="DragAPI\Data Types\Color.cpp" />
+    <ClCompile Include="DragAPI\Data Types\Platform\Windows\DateTime Windows.cpp" />
     <ClCompile Include="DragAPI\Data Types\Rect.cpp" />
     <ClCompile Include="DragAPI\Data Types\String.cpp" />
     <ClCompile Include="DragAPI\DateTime.cpp" />
-    <ClCompile Include="DragAPI\Debug.cpp" />
-    <ClCompile Include="DragAPI\DragAPI.Threading.cpp" />
+    <ClCompile Include="DragAPI\Debugging\Platform\Windows\LoggingWindows.cpp" />
+    <ClCompile Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.cpp" />
+    <ClCompile Include="DragAPI\Event System\ApplicationEvents.cpp" />
     <ClCompile Include="DragAPI\Event System\Event.cpp" />
     <ClCompile Include="DragAPI\Event System\EventExceptions.cpp" />
     <ClCompile Include="DragAPI\Event System\EventSystem.cpp" />
     <ClCompile Include="DragAPI\Event System\KeyboardEvents.cpp" />
+    <ClCompile Include="DragAPI\Event System\WindowEvents.cpp" />
     <ClCompile Include="DragAPI\Exceptions\Exceptions.cpp" />
-    <ClCompile Include="DragAPI\Graphics\GraphicsRenderingEngine.cpp" />
     <ClCompile Include="DragAPI\HTML\HTML.cpp" />
     <ClCompile Include="DragAPI\Injector.cpp" />
     <ClCompile Include="DragAPI\IO\IOExceptions.cpp" />
@@ -245,7 +253,6 @@
     <ClCompile Include="DragAPI\Math\Math.cpp" />
     <ClCompile Include="DragAPI\Diagnostics\MethodInfo.cpp" />
     <ClCompile Include="DragAPI\Diagnostics\ModuleInfo.cpp" />
-    <ClCompile Include="DragAPI\Networking\HTTPClient.cpp" />
     <ClCompile Include="DragAPI\Networking\Platform_Windows\SocketWindows.cpp" />
     <ClCompile Include="DragAPI\Networking\Platform_Windows\WebWindows.cpp" />
     <ClCompile Include="DragAPI\Networking\Sockets.cpp" />
@@ -255,9 +262,9 @@
     <ClCompile Include="DragAPI\Data Types\Vectors.cpp" />
     <ClCompile Include="DragAPI\Graphics\Window.cpp" />
     <ClCompile Include="DragAPI\Networking\Web.cpp" />
-    <ClCompile Include="DragAPI\Networking\WebBrowser.cpp" />
     <ClCompile Include="DragAPI\Physics\PhysicsEngine.cpp" />
     <ClCompile Include="DragAPI\Text\Text Document\TextDocument.cpp" />
+    <ClCompile Include="DragAPI\Threading\Platform\ThreadingWindows.cpp" />
     <ClCompile Include="DragAPI\Types\Types.cpp" />
   </ItemGroup>
   <ItemGroup>

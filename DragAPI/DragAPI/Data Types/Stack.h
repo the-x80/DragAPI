@@ -11,7 +11,7 @@ namespace DragAPI {
 
 
 	namespace Exceptions {
-		template <typename T> class StackOverflow : public Exception {
+		template <typename T> class StackOverflow : public ::DragAPI::Exceptions::Exception {
 		private:
 			Stack<T>& objectReference;
 		public:
@@ -24,7 +24,7 @@ namespace DragAPI {
 
 			const char* what() const override {};
 		};
-		template <typename T> class StackUnderflow : public Exception {
+		template <typename T> class StackUnderflow : public ::DragAPI::Exceptions::Exception {
 		private:
 			Stack<T>& objectReference;
 		public:

@@ -4,25 +4,14 @@
 #include <array>
 #include <vector>
 #include <string>
-
-#ifndef _WINDOWS_
-#include <Windows.h>
-#endif
 #include "../Exceptions/Exceptions.h"
 #include "../Data Types/Rect.h"
 
-#include "GraphicsRenderingEngine.h"
-#include "../Application/Application.h"
+#include "../Event System/EventSystem.h"
 
 //TODO Set the window class to be a wrapper around OS specific window classes
 
 namespace DragAPI {
-	enum class WindowMode {
-		Windowed,
-		WindowedFullscreen,
-		Fullscreen
-	};
-
 	class Window {
 	protected:
 		Rect<int> m_WindowRect;
@@ -51,8 +40,9 @@ namespace DragAPI {
 		private:
 			Window* m_Window;
 		public:
-			WindowException() {}
+			WindowException() :m_Window(nullptr){}
 			WindowException(Window* window) : m_Window(window) {}
+			~WindowException() {};
 
 			const char* what() const override {
 				return "";

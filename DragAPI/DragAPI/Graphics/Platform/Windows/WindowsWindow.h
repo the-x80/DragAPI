@@ -814,7 +814,11 @@ namespace DragAPI {
 		switch (msg) {
 		case WM_NCCREATE:
 			break;
+        case WM_CREATE:
+            e = new DragAPI::Events::WindowCreateEvent(l_Window);
+            break;
         case WM_CLOSE:
+            e = new DragAPI::Events::WindowCloseEvent(l_Window);
             break;
         case WM_DESTROY:
 
@@ -826,7 +830,7 @@ namespace DragAPI {
             e = new DragAPI::Events::KeyboardReleasedEvent();
             break;
 		default:
-			break;
+            return DefWindowProc(hwnd, msg, wParam, lParam);
 		}
         if (l_Window != nullptr) {//This should be an assert. l_Window should never be nullptr.
             if (e != nullptr) {//The variable "e" should be null only when an event is not handeled here.

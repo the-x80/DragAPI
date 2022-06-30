@@ -12,7 +12,7 @@
 
 #pragma comment(lib, "Dbghelp.lib")
 #endif
-
+#include "../Debugging/Debug.h"
 #include "../Diagnostics/Diagnostics.h"
 
 
@@ -62,13 +62,7 @@ DragAPI::Exceptions::Exception::Exception() noexcept
 	this->n_SourceFileLine = 0;
 
 	//Note StackTrace does not have full functionality for now.
-	this->stackTrace = new DragAPI::Diagnostics::StackTrace(1);
-	//this->mi_Method = DebugMethodInfo();
-
-	//A debugger is attached. What you could do is to display a Window detailing the exception.
-	if (IsDebuggerPresent() == TRUE) {
-		
-	}
+	this->stackTrace = DragAPI::Diagnostics::StackTrace::Create(1);
 }
 
 DragAPI::Exceptions::Exception::Exception(const char* msg) noexcept
@@ -86,7 +80,7 @@ DragAPI::Exceptions::Exception::Exception(const char* msg) noexcept
 
 	this->cstr_FullMessage = new char[0];
 
-	this->stackTrace = new DragAPI::Diagnostics::StackTrace(1);
+	this->stackTrace = DragAPI::Diagnostics::StackTrace::Create(1);
 
 	//this->mi_Method = DebugMethodInfo();
 

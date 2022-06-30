@@ -7,7 +7,7 @@
 #include "Event.h"
 #include "ApplicationEvents.h"
 #include "KeyboardEvents.h"
-
+#include "WindowEvents.h"
 
 
 namespace DragAPI {

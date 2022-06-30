@@ -20,6 +20,8 @@
 	#endif
 #endif
 
+#include "DragAPI/Debugging/Debug.h"
+
 #include "DragAPI/Math/Math.h"
 
 #include "DragAPI/Types/Types.h"
@@ -27,8 +29,6 @@
 #include "DragAPI/Exceptions/Exceptions.h"
 
 #include "DragAPI/Diagnostics/Diagnostics.h"
-
-#include "DragAPI/Debug.h"
 
 #include "DragAPI/Array/Array.h"
 
@@ -43,6 +43,8 @@
 #include "DragAPI/KeyCodes.h"
 
 #include "DragAPI/Event System/EventSystem.h"
+
+#include "DragAPI/Threading/Threading.h"
 
 #include "DragAPI/Localisation/Localisation.h"
 
@@ -59,8 +61,6 @@
 
 #include "DragAPI/Text/Text.h"
 #include "DragAPI/HTML/HTML.h"
-
-#include "DragAPI/Graphics/GraphicsRenderingEngine.h"
 
 #include "DragAPI/Application/Application.h"
 
