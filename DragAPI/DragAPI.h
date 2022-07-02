@@ -36,6 +36,7 @@
 #include "DragAPI/Data Types/Color.h"
 #include "DragAPI/Data Types/Vectors.h"
 #include "DragAPI/Data Types/Quaternion.h"
+#include "DragAPI/Data Types/Matrix.h"
 #include "DragAPI/Data Types/Rect.h"
 #include "DragAPI/Data Types/Stack.h"
 #include "DragAPI/Data Types/String.h"
@@ -66,5 +67,5 @@
 
 #include "DragAPI/Physics/Physics.h"
 
-#include "DragAPI/DragAPI.Entry.h"
+
 #endif

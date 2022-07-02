@@ -4,6 +4,10 @@
 #include <cstdarg>
 #include <math.h>
 #include <type_traits>
+#include <nmmintrin.h>
+#include <immintrin.h>
+
+//TODO: Implement SIMD instruction into vector calculations
 
 
 namespace DragAPI {
@@ -85,6 +89,7 @@ namespace DragAPI {
 		}
 
 		size_t ComponentCount() { return N; };
+		size_t Size() { return ComponentCount() * sizeof(T); }
 
 		static float Dot(Vector left, Vector right) {
 
@@ -97,6 +102,8 @@ namespace DragAPI {
 		static Vector Cross(Vector left, Vector right) {
 			return Vector();
 		}
+
+		
 
 
 		T& operator[](size_t index) { return this->components[index]; }

@@ -20,6 +20,7 @@ namespace DragAPI {
 		DragAPI::Events::EventDispatcher* m_EventDispatcher;
 		bool m_Running;
 		
+		static Application* s_Application;
 	public:
 		Application();
 		~Application();
@@ -32,16 +33,12 @@ namespace DragAPI {
 		static Application* CreateApplication();
 
 		/// <summary>
-		/// Posts a quit event
-		/// </summary>
-		/// <param name="nExitCode"></param>
-		virtual void Quit(int nExitCode) = 0;
-
-		/// <summary>
 		/// Used to run the application.
 		/// Must be implemented by a derrived class
 		/// </summary>
 		virtual void Run() = 0;
+
+		static void Quit(int nExitCode);
 
 
 		virtual void OnEvent(DragAPI::Events::Event* e) override {

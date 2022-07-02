@@ -10,7 +10,7 @@
 namespace DragAPI {
 	class Injector {
 	private:
-		String h_InjectedDllFileName;
+		std::wstring h_InjectedDllFileName;
 		HANDLE h_TargetProcess;
 	public:
 		Injector();

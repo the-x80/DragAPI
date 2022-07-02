@@ -94,6 +94,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -111,6 +112,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -128,6 +130,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -145,6 +148,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -162,6 +166,7 @@
     <ClInclude Include="DragAPI\Data Types\Color.h" />
     <ClInclude Include="DragAPI\Data Types\DateTime.h" />
     <ClInclude Include="DragAPI\Data Types\Integers.h" />
+    <ClInclude Include="DragAPI\Data Types\Matrix.h" />
     <ClInclude Include="DragAPI\Data Types\Queue.h" />
     <ClInclude Include="DragAPI\Data Types\Rect.h" />
     <ClInclude Include="DragAPI\Data Types\Stack.h" />
@@ -194,9 +199,7 @@
     <ClInclude Include="DragAPI\HTML\HTML.h" />
     <ClInclude Include="DragAPI\Injector.h" />
     <ClInclude Include="DragAPI\IO\IOExceptions.h" />
-    <ClInclude Include="DragAPI\IO\File.h" />
     <ClInclude Include="DragAPI\IO\IO.h" />
-    <ClInclude Include="DragAPI\IO\TextFile.h" />
     <ClInclude Include="DragAPI\Json\Json.h" />
     <ClInclude Include="DragAPI\KeyCodes.h" />
     <ClInclude Include="DragAPI\Localisation\Language.h" />
@@ -248,9 +251,6 @@
     <ClCompile Include="DragAPI\HTML\HTML.cpp" />
     <ClCompile Include="DragAPI\Injector.cpp" />
     <ClCompile Include="DragAPI\IO\IOExceptions.cpp" />
-    <ClCompile Include="DragAPI\IO\File.cpp" />
-    <ClCompile Include="DragAPI\IO\Platform_Windows\File.cpp" />
-    <ClCompile Include="DragAPI\IO\TextFile.cpp" />
     <ClCompile Include="DragAPI\Localisation\Language.cpp" />
     <ClCompile Include="DragAPI\Localisation\LocalisedString.cpp" />
     <ClCompile Include="DragAPI\Math\Math.cpp" />
