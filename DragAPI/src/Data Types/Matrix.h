@@ -8,12 +8,5 @@ namespace DragAPI {
 		Matrix() {
 
 		}
-
-
-
-
-		T operator[][](size_t x, size_t y){
-			return this->m_Elements[x + (X * y)];
-		}
 	};
 }

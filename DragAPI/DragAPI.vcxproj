@@ -73,18 +73,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -159,116 +163,116 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="DragAPI\Application\Application.h" />
-    <ClInclude Include="DragAPI\Array\Array.h" />
-    <ClInclude Include="DragAPI\Console\Console.h" />
-    <ClInclude Include="DragAPI\Crypto\Crypto.h" />
-    <ClInclude Include="DragAPI\Data Types\Color.h" />
-    <ClInclude Include="DragAPI\Data Types\DateTime.h" />
-    <ClInclude Include="DragAPI\Data Types\Integers.h" />
-    <ClInclude Include="DragAPI\Data Types\Matrix.h" />
-    <ClInclude Include="DragAPI\Data Types\Queue.h" />
-    <ClInclude Include="DragAPI\Data Types\Rect.h" />
-    <ClInclude Include="DragAPI\Data Types\Stack.h" />
-    <ClInclude Include="DragAPI\Data Types\String.h" />
-    <ClInclude Include="DragAPI\DateTime.h" />
-    <ClInclude Include="DragAPI\Debugging\Debug.h" />
-    <ClInclude Include="DragAPI\Debugging\Logging.h" />
-    <ClInclude Include="DragAPI\Diagnostics\Diagnostics.h" />
-    <ClInclude Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.h" />
-    <ClInclude Include="DragAPI\Diagnostics\Profiling\Profiling.h" />
-    <ClInclude Include="DragAPI\DragAPI.Core.h" />
-    <ClInclude Include="DragAPI\DragAPI.Entry.h" />
-    <ClInclude Include="DragAPI.h" />
-    <ClInclude Include="DragAPI\DragAPI.Networking.h" />
-    <ClInclude Include="DragAPI\DragAPI.PlatformDefinitions.h" />
-    <ClInclude Include="DragAPI\Callback.h" />
-    <ClInclude Include="DragAPI\Event System\ApplicationEvents.h" />
-    <ClInclude Include="DragAPI\Event System\Event.h" />
-    <ClInclude Include="DragAPI\Event System\EventExceptions.h" />
-    <ClInclude Include="DragAPI\Event System\EventSystem.h" />
-    <ClInclude Include="DragAPI\Event System\KeyboardEvents.h" />
-    <ClInclude Include="DragAPI\Event System\WindowEvents.h" />
-    <ClInclude Include="DragAPI\Exceptions\Exceptions.h" />
-    <ClInclude Include="DragAPI\Exceptions\Platform\Windows\ExceptionsWindows.h" />
-    <ClInclude Include="DragAPI\Graphics\Graphics.h" />
-    <ClInclude Include="DragAPI\Diagnostics\InfoObject.h" />
-    <ClInclude Include="DragAPI\Graphics\Platform\Direct3D\Direct3DRenderer.h" />
-    <ClInclude Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.h" />
-    <ClInclude Include="DragAPI\Graphics\Renderer.h" />
-    <ClInclude Include="DragAPI\HTML\HTML.h" />
-    <ClInclude Include="DragAPI\Injector.h" />
-    <ClInclude Include="DragAPI\IO\IOExceptions.h" />
-    <ClInclude Include="DragAPI\IO\IO.h" />
-    <ClInclude Include="DragAPI\Json\Json.h" />
-    <ClInclude Include="DragAPI\KeyCodes.h" />
-    <ClInclude Include="DragAPI\Localisation\Language.h" />
-    <ClInclude Include="DragAPI\Localisation\Localisation.h" />
-    <ClInclude Include="DragAPI\Localisation\LocalisedString.h" />
-    <ClInclude Include="DragAPI\Math\Math.h" />
-    <ClInclude Include="DragAPI\Diagnostics\MethodInfo.h" />
-    <ClInclude Include="DragAPI\Diagnostics\ModuleInfo.h" />
-    <ClInclude Include="DragAPI\Networking\Exceptions.h" />
-    <ClInclude Include="DragAPI\Networking\Platform_Windows\SocketWindows.h" />
-    <ClInclude Include="DragAPI\Networking\Platform_Windows\WebWindows.h" />
-    <ClInclude Include="DragAPI\Networking\Sockets.h" />
-    <ClInclude Include="DragAPI\Data Types\Quaternion.h" />
-    <ClInclude Include="DragAPI\Diagnostics\StackTrace.h" />
-    <ClInclude Include="DragAPI\Diagnostics\SymbolHelper.h" />
-    <ClInclude Include="DragAPI\Diagnostics\TypeInfo.h" />
-    <ClInclude Include="DragAPI\Data Types\Vectors.h" />
-    <ClInclude Include="DragAPI\Graphics\Window.h" />
-    <ClInclude Include="DragAPI\Networking\Web.h" />
-    <ClInclude Include="DragAPI\Physics\Physics.h" />
-    <ClInclude Include="DragAPI\Physics\PhysicsEngine.h" />
-    <ClInclude Include="DragAPI\Text\Text Document\TextDocument.h" />
-    <ClInclude Include="DragAPI\Text\Text.h" />
-    <ClInclude Include="DragAPI\Threading\Threading.h" />
-    <ClInclude Include="DragAPI\Types\Types.h" />
+    <ClInclude Include="src\Application\Application.h" />
+    <ClInclude Include="src\Array\Array.h" />
+    <ClInclude Include="src\Console\Console.h" />
+    <ClInclude Include="src\Crypto\Crypto.h" />
+    <ClInclude Include="src\Data Types\Color.h" />
+    <ClInclude Include="src\Data Types\DateTime.h" />
+    <ClInclude Include="src\Data Types\Integers.h" />
+    <ClInclude Include="src\Data Types\Matrix.h" />
+    <ClInclude Include="src\Data Types\Queue.h" />
+    <ClInclude Include="src\Data Types\Rect.h" />
+    <ClInclude Include="src\Data Types\Stack.h" />
+    <ClInclude Include="src\Data Types\String.h" />
+    <ClInclude Include="src\DateTime.h" />
+    <ClInclude Include="src\Debugging\Debug.h" />
+    <ClInclude Include="src\Debugging\Logging.h" />
+    <ClInclude Include="src\Diagnostics\Diagnostics.h" />
+    <ClInclude Include="src\Diagnostics\Platform\Windows\StackTraceWindows.h" />
+    <ClInclude Include="src\Diagnostics\Profiling\Profiling.h" />
+    <ClInclude Include="src\DragAPI.Core.h" />
+    <ClInclude Include="src\DragAPI.Entry.h" />
+    <ClInclude Include="include\DragAPI.h" />
+    <ClInclude Include="src\DragAPI.Networking.h" />
+    <ClInclude Include="src\DragAPI.PlatformDefinitions.h" />
+    <ClInclude Include="src\Callback.h" />
+    <ClInclude Include="src\Event System\ApplicationEvents.h" />
+    <ClInclude Include="src\Event System\Event.h" />
+    <ClInclude Include="src\Event System\EventExceptions.h" />
+    <ClInclude Include="src\Event System\EventSystem.h" />
+    <ClInclude Include="src\Event System\KeyboardEvents.h" />
+    <ClInclude Include="src\Event System\WindowEvents.h" />
+    <ClInclude Include="src\Exceptions\Exceptions.h" />
+    <ClInclude Include="src\Exceptions\Platform\Windows\ExceptionsWindows.h" />
+    <ClInclude Include="src\Graphics\Graphics.h" />
+    <ClInclude Include="src\Diagnostics\InfoObject.h" />
+    <ClInclude Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.h" />
+    <ClInclude Include="src\Graphics\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Graphics\Renderer.h" />
+    <ClInclude Include="src\HTML\HTML.h" />
+    <ClInclude Include="src\Injector.h" />
+    <ClInclude Include="src\IO\IOExceptions.h" />
+    <ClInclude Include="src\IO\IO.h" />
+    <ClInclude Include="src\Json\Json.h" />
+    <ClInclude Include="src\KeyCodes.h" />
+    <ClInclude Include="src\Localisation\Language.h" />
+    <ClInclude Include="src\Localisation\Localisation.h" />
+    <ClInclude Include="src\Localisation\LocalisedString.h" />
+    <ClInclude Include="src\Math\Math.h" />
+    <ClInclude Include="src\Diagnostics\MethodInfo.h" />
+    <ClInclude Include="src\Diagnostics\ModuleInfo.h" />
+    <ClInclude Include="src\Networking\Exceptions.h" />
+    <ClInclude Include="src\Networking\Platform_Windows\SocketWindows.h" />
+    <ClInclude Include="src\Networking\Platform_Windows\WebWindows.h" />
+    <ClInclude Include="src\Networking\Sockets.h" />
+    <ClInclude Include="src\Data Types\Quaternion.h" />
+    <ClInclude Include="src\Diagnostics\StackTrace.h" />
+    <ClInclude Include="src\Diagnostics\SymbolHelper.h" />
+    <ClInclude Include="src\Diagnostics\TypeInfo.h" />
+    <ClInclude Include="src\Data Types\Vectors.h" />
+    <ClInclude Include="src\Graphics\Window.h" />
+    <ClInclude Include="src\Networking\Web.h" />
+    <ClInclude Include="src\Physics\Physics.h" />
+    <ClInclude Include="src\Physics\PhysicsEngine.h" />
+    <ClInclude Include="src\Text\Text Document\TextDocument.h" />
+    <ClInclude Include="src\Text\Text.h" />
+    <ClInclude Include="src\Threading\Threading.h" />
+    <ClInclude Include="src\Types\Types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DragAPI\Application\Application.cpp" />
-    <ClCompile Include="DragAPI.cpp" />
-    <ClCompile Include="DragAPI\Array\Array.cpp" />
-    <ClCompile Include="DragAPI\Console\Console.cpp" />
-    <ClCompile Include="DragAPI\Data Types\Color.cpp" />
-    <ClCompile Include="DragAPI\Data Types\Platform\Windows\DateTime Windows.cpp" />
-    <ClCompile Include="DragAPI\Data Types\Rect.cpp" />
-    <ClCompile Include="DragAPI\Data Types\String.cpp" />
-    <ClCompile Include="DragAPI\DateTime.cpp" />
-    <ClCompile Include="DragAPI\Debugging\Platform\Windows\LoggingWindows.cpp" />
-    <ClCompile Include="DragAPI\Diagnostics\Platform\Windows\StackTraceWindows.cpp" />
-    <ClCompile Include="DragAPI\Event System\ApplicationEvents.cpp" />
-    <ClCompile Include="DragAPI\Event System\Event.cpp" />
-    <ClCompile Include="DragAPI\Event System\EventExceptions.cpp" />
-    <ClCompile Include="DragAPI\Event System\EventSystem.cpp" />
-    <ClCompile Include="DragAPI\Event System\KeyboardEvents.cpp" />
-    <ClCompile Include="DragAPI\Event System\WindowEvents.cpp" />
-    <ClCompile Include="DragAPI\Exceptions\Exceptions.cpp" />
-    <ClCompile Include="DragAPI\Graphics\Platform\Direct3D\Direct3DRenderer.cpp" />
-    <ClCompile Include="DragAPI\Graphics\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="DragAPI\Graphics\Renderer.cpp" />
-    <ClCompile Include="DragAPI\HTML\HTML.cpp" />
-    <ClCompile Include="DragAPI\Injector.cpp" />
-    <ClCompile Include="DragAPI\IO\IOExceptions.cpp" />
-    <ClCompile Include="DragAPI\Localisation\Language.cpp" />
-    <ClCompile Include="DragAPI\Localisation\LocalisedString.cpp" />
-    <ClCompile Include="DragAPI\Math\Math.cpp" />
-    <ClCompile Include="DragAPI\Diagnostics\MethodInfo.cpp" />
-    <ClCompile Include="DragAPI\Diagnostics\ModuleInfo.cpp" />
-    <ClCompile Include="DragAPI\Networking\Platform_Windows\SocketWindows.cpp" />
-    <ClCompile Include="DragAPI\Networking\Platform_Windows\WebWindows.cpp" />
-    <ClCompile Include="DragAPI\Networking\Sockets.cpp" />
-    <ClCompile Include="DragAPI\Data Types\Quaternion.cpp" />
-    <ClCompile Include="DragAPI\Diagnostics\StackTrace.cpp" />
-    <ClCompile Include="DragAPI\Diagnostics\SymbolHelper.cpp" />
-    <ClCompile Include="DragAPI\Data Types\Vectors.cpp" />
-    <ClCompile Include="DragAPI\Graphics\Window.cpp" />
-    <ClCompile Include="DragAPI\Networking\Web.cpp" />
-    <ClCompile Include="DragAPI\Physics\PhysicsEngine.cpp" />
-    <ClCompile Include="DragAPI\Text\Text Document\TextDocument.cpp" />
-    <ClCompile Include="DragAPI\Threading\Platform\ThreadingWindows.cpp" />
-    <ClCompile Include="DragAPI\Types\Types.cpp" />
+    <ClCompile Include="src\Application\Application.cpp" />
+    <ClCompile Include="src\DragAPI.cpp" />
+    <ClCompile Include="src\Array\Array.cpp" />
+    <ClCompile Include="src\Console\Console.cpp" />
+    <ClCompile Include="src\Data Types\Color.cpp" />
+    <ClCompile Include="src\Data Types\Platform\Windows\DateTime Windows.cpp" />
+    <ClCompile Include="src\Data Types\Rect.cpp" />
+    <ClCompile Include="src\Data Types\String.cpp" />
+    <ClCompile Include="src\DateTime.cpp" />
+    <ClCompile Include="src\Debugging\Platform\Windows\LoggingWindows.cpp" />
+    <ClCompile Include="src\Diagnostics\Platform\Windows\StackTraceWindows.cpp" />
+    <ClCompile Include="src\Event System\ApplicationEvents.cpp" />
+    <ClCompile Include="src\Event System\Event.cpp" />
+    <ClCompile Include="src\Event System\EventExceptions.cpp" />
+    <ClCompile Include="src\Event System\EventSystem.cpp" />
+    <ClCompile Include="src\Event System\KeyboardEvents.cpp" />
+    <ClCompile Include="src\Event System\WindowEvents.cpp" />
+    <ClCompile Include="src\Exceptions\Exceptions.cpp" />
+    <ClCompile Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.cpp" />
+    <ClCompile Include="src\Graphics\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Graphics\Renderer.cpp" />
+    <ClCompile Include="src\HTML\HTML.cpp" />
+    <ClCompile Include="src\Injector.cpp" />
+    <ClCompile Include="src\IO\IOExceptions.cpp" />
+    <ClCompile Include="src\Localisation\Language.cpp" />
+    <ClCompile Include="src\Localisation\LocalisedString.cpp" />
+    <ClCompile Include="src\Math\Math.cpp" />
+    <ClCompile Include="src\Diagnostics\MethodInfo.cpp" />
+    <ClCompile Include="src\Diagnostics\ModuleInfo.cpp" />
+    <ClCompile Include="src\Networking\Platform_Windows\SocketWindows.cpp" />
+    <ClCompile Include="src\Networking\Platform_Windows\WebWindows.cpp" />
+    <ClCompile Include="src\Networking\Sockets.cpp" />
+    <ClCompile Include="src\Data Types\Quaternion.cpp" />
+    <ClCompile Include="src\Diagnostics\StackTrace.cpp" />
+    <ClCompile Include="src\Diagnostics\SymbolHelper.cpp" />
+    <ClCompile Include="src\Data Types\Vectors.cpp" />
+    <ClCompile Include="src\Graphics\Window.cpp" />
+    <ClCompile Include="src\Networking\Web.cpp" />
+    <ClCompile Include="src\Physics\PhysicsEngine.cpp" />
+    <ClCompile Include="src\Text\Text Document\TextDocument.cpp" />
+    <ClCompile Include="src\Threading\Platform\ThreadingWindows.cpp" />
+    <ClCompile Include="src\Types\Types.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

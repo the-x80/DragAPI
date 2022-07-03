@@ -11,6 +11,7 @@ namespace DragAPI {
 			Error
 		};
 		void Log(LogLevel level, const char* format, ...);
+		void Log(LogLevel level, bool performStackTrace, const char* format, ...);
 	}
 }
 

@@ -742,7 +742,7 @@ namespace DragAPI {
     void WindowsWindow::Process() {
         MSG msg;
         ZeroMemory(&msg, sizeof(msg));
-        while (::PeekMessage(&msg, (HWND)this->m_Handle, 0, 0, PM_REMOVE)) {
+        while (PeekMessage(&msg, (HWND)this->m_Handle, 0, 0, PM_REMOVE)) {
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }

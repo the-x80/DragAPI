@@ -32,7 +32,7 @@ namespace DragAPI {
 			virtual void Bind() = 0;
 		};
 
-		class Shader {
+		class Shader : Object{
 		public:
 		};
 

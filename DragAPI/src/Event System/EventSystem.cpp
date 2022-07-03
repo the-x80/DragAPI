@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include "EventSystem.h"
+#include "../Debugging/Debug.h"
 
 DragAPI::Events::EventDispatcher::EventDispatcher()
 {
@@ -19,6 +20,8 @@ void DragAPI::Events::EventDispatcher::PushEvent(Event* e)
 
 void DragAPI::Events::EventDispatcher::Dispatch()
 {
+	if (this->m_QueuedEvents.size() == 0) return;
+	DragAPI::Debug::Log(DragAPI::Debug::LogLevel::Info, "EventDispatcher @ %p :: Dispatching %d number of events to %d number of listeners.\n", this, this->m_QueuedEvents.size(), this->m_EventListeners.size());
 	for (int i = 0; i < this->m_QueuedEvents.size(); i++) {
 		this->DispatchEvent(this->m_QueuedEvents.front());
 		this->m_QueuedEvents.pop();
