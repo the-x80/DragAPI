@@ -23,7 +23,7 @@ namespace DragAPI {
 		static Application* s_Application;
 	public:
 		Application();
-		~Application();
+		virtual ~Application();
 
 		/// <summary>
 		/// Creates an application object

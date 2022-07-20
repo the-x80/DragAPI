@@ -788,9 +788,6 @@ namespace DragAPI {
         case WM_CLOSE:
             e = new DragAPI::Events::WindowCloseEvent(l_Window);
             break;
-        case WM_DESTROY:
-
-            break;
         case WM_KEYDOWN:
             e = new DragAPI::Events::KeyboardPressedEvent();
             break;
