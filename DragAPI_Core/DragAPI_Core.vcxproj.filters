@@ -4,21 +4,37 @@
     <Filter Include="include">
       <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\DragAPI">
+      <UniqueIdentifier>{D05B9DBF-3CE7-0A84-45F8-8D78B1026784}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Exception">
+      <UniqueIdentifier>{2BD3C70E-9793-4345-60CE-8CC2CC4D8821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Types">
+      <UniqueIdentifier>{915CF0B3-FDC6-A42A-4605-56D0B2AE827F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\DragAPI_Core.h">
-      <Filter>include</Filter>
+    <ClInclude Include="include\DragAPI\Core.h">
+      <Filter>include\DragAPI</Filter>
     </ClInclude>
-    <ClInclude Include="src\Types\Types.h" />
-    <ClInclude Include="src\Types\Vectors\Vectors.h" />
+    <ClInclude Include="src\Exception\Exception.h">
+      <Filter>src\Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Types\Types.h">
+      <Filter>src\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Types\Vectors.h">
+      <Filter>src\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Types\Rect.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DragAPI_Core.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\Types\Vectors\Vectors.cpp" />
   </ItemGroup>
 </Project>

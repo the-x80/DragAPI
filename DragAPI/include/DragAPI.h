@@ -68,7 +68,7 @@
 #include "../src/Physics/Physics.h"
 
 
-#include <DragAPI_Core.h>
-#include <DragAPI_Graphical.h>
+#include <DragAPI/Core.h>
+#include <DragAPI/Graphical.h>
 
 #endif

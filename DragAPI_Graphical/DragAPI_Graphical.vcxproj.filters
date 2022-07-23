@@ -4,23 +4,65 @@
     <Filter Include="include">
       <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="include\DragAPI">
+      <UniqueIdentifier>{D05B9DBF-3CE7-0A84-45F8-8D78B1026784}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GraphicsAPI">
+      <UniqueIdentifier>{07D6788E-7361-E652-7C72-6947E87C4253}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GraphicsAPI\DirectX">
+      <UniqueIdentifier>{C9CF198C-3507-6223-3E11-C646AAC7881C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GraphicsAPI\OpenGL">
+      <UniqueIdentifier>{5B9195F7-478B-BE49-30F8-545A1C9124B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UserInterface">
+      <UniqueIdentifier>{0CCB6437-78E1-62CD-C158-EEEE2DAE3355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UserInterface\Platform">
+      <UniqueIdentifier>{E03426F5-CC44-D2C5-35FE-36E4212DC15E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\UserInterface\Platform\Windows">
+      <UniqueIdentifier>{1ABF0A75-06FB-0DDF-6F0D-26D65B68B6F9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\DragAPI_Graphical.h">
-      <Filter>include</Filter>
+    <ClInclude Include="include\DragAPI\Graphical.h">
+      <Filter>include\DragAPI</Filter>
     </ClInclude>
-    <ClInclude Include="src\GraphicsAPI\GraphicsAPI.h" />
-    <ClInclude Include="src\GraphicsAPI\DirectX\GraphicsAPI_DirectX.h" />
-    <ClInclude Include="src\UserInterface\Window.h" />
+    <ClInclude Include="src\GraphicsAPI\DirectX\GraphicsAPI_DirectX.h">
+      <Filter>src\GraphicsAPI\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicsAPI\GraphicsAPI.h">
+      <Filter>src\GraphicsAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GraphicsAPI\OpenGL\GraphicsAPI_OpenGL.h">
+      <Filter>src\GraphicsAPI\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserInterface\Platform\Windows\Window_win32.h">
+      <Filter>src\UserInterface\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserInterface\Window.h">
+      <Filter>src\UserInterface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DragAPI_Graphical.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="src\GraphicsAPI\GraphicsAPI.cpp" />
-    <ClCompile Include="src\GraphicsAPI\DirectX\GraphicsAPI_DirectX.cpp" />
+    <ClCompile Include="src\GraphicsAPI\DirectX\GraphicsAPI_DirectX.cpp">
+      <Filter>src\GraphicsAPI\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicsAPI\GraphicsAPI.cpp">
+      <Filter>src\GraphicsAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GraphicsAPI\OpenGL\GraphicsAPI_OpenGL.cpp">
+      <Filter>src\GraphicsAPI\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UserInterface\Window.cpp" />
+    <ClCompile Include="src\UserInterface\Platform\Windows\Window_win32.cpp" />
   </ItemGroup>
 </Project>

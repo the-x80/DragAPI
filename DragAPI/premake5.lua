@@ -1,4 +1,4 @@
-printf("Creating DragAPI project.\n")
+printf("Creating DragAPI project.")
 project("DragAPI")
 language("C++")
 kind("StaticLib")
