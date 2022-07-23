@@ -5,13 +5,13 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -19,51 +19,46 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{5DBB3887-C99A-B722-D2B2-42F93E111E84}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2c10575d-0ca0-4712-b6b7-194c4a161172}</ProjectGuid>
     <RootNamespace>DragAPI</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -71,122 +66,134 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>..\bin\Debug-windows-x86\</OutDir>
+    <IntDir>..\bin-int\DragAPI\Debug-windows-x86\DragAPI\</IntDir>
+    <TargetName>DragAPI</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>..\bin\Debug-windows-x86_64\</OutDir>
+    <IntDir>..\bin-int\DragAPI\Debug-windows-x86_64\DragAPI\</IntDir>
+    <TargetName>DragAPI</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\bin\Release-windows-x86\</OutDir>
+    <IntDir>..\bin-int\DragAPI\Release-windows-x86\DragAPI\</IntDir>
+    <TargetName>DragAPI</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Build-int\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>..\bin\Release-windows-x86_64\</OutDir>
+    <IntDir>..\bin-int\DragAPI\Release-windows-x86_64\DragAPI\</IntDir>
+    <TargetName>DragAPI</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\DragAPI_Core\include;..\DragAPI_Graphical\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <SubSystem>
-      </SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\DragAPI_Core\include;..\DragAPI_Graphical\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\DragAPI_Core\include;..\DragAPI_Graphical\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\bin\Release-windows-x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>..\DragAPI_Core\include;..\DragAPI_Graphical\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\AMD-PC\source\repos\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>..\bin\Release-windows-x86_64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\DragAPI.h" />
     <ClInclude Include="src\Application\Application.h" />
     <ClInclude Include="src\Array\Array.h" />
+    <ClInclude Include="src\Callback.h" />
     <ClInclude Include="src\Console\Console.h" />
     <ClInclude Include="src\Crypto\Crypto.h" />
     <ClInclude Include="src\Data Types\Color.h" />
     <ClInclude Include="src\Data Types\DateTime.h" />
     <ClInclude Include="src\Data Types\Integers.h" />
     <ClInclude Include="src\Data Types\Matrix.h" />
+    <ClInclude Include="src\Data Types\Quaternion.h" />
     <ClInclude Include="src\Data Types\Queue.h" />
     <ClInclude Include="src\Data Types\Rect.h" />
     <ClInclude Include="src\Data Types\Stack.h" />
     <ClInclude Include="src\Data Types\String.h" />
+    <ClInclude Include="src\Data Types\Vectors.h" />
     <ClInclude Include="src\DateTime.h" />
     <ClInclude Include="src\Debugging\Debug.h" />
     <ClInclude Include="src\Debugging\Logging.h" />
     <ClInclude Include="src\Diagnostics\Diagnostics.h" />
+    <ClInclude Include="src\Diagnostics\InfoObject.h" />
+    <ClInclude Include="src\Diagnostics\MethodInfo.h" />
+    <ClInclude Include="src\Diagnostics\ModuleInfo.h" />
     <ClInclude Include="src\Diagnostics\Platform\Windows\StackTraceWindows.h" />
     <ClInclude Include="src\Diagnostics\Profiling\Profiling.h" />
+    <ClInclude Include="src\Diagnostics\StackTrace.h" />
+    <ClInclude Include="src\Diagnostics\SymbolHelper.h" />
+    <ClInclude Include="src\Diagnostics\TypeInfo.h" />
     <ClInclude Include="src\DragAPI.Core.h" />
     <ClInclude Include="src\DragAPI.Entry.h" />
-    <ClInclude Include="include\DragAPI.h" />
     <ClInclude Include="src\DragAPI.Networking.h" />
     <ClInclude Include="src\DragAPI.PlatformDefinitions.h" />
-    <ClInclude Include="src\Callback.h" />
     <ClInclude Include="src\Event System\ApplicationEvents.h" />
     <ClInclude Include="src\Event System\Event.h" />
     <ClInclude Include="src\Event System\EventExceptions.h" />
@@ -196,32 +203,24 @@
     <ClInclude Include="src\Exceptions\Exceptions.h" />
     <ClInclude Include="src\Exceptions\Platform\Windows\ExceptionsWindows.h" />
     <ClInclude Include="src\Graphics\Graphics.h" />
-    <ClInclude Include="src\Diagnostics\InfoObject.h" />
     <ClInclude Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.h" />
     <ClInclude Include="src\Graphics\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Graphics\Renderer.h" />
+    <ClInclude Include="src\Graphics\Window.h" />
     <ClInclude Include="src\HTML\HTML.h" />
-    <ClInclude Include="src\Injector.h" />
-    <ClInclude Include="src\IO\IOExceptions.h" />
     <ClInclude Include="src\IO\IO.h" />
+    <ClInclude Include="src\IO\IOExceptions.h" />
+    <ClInclude Include="src\Injector.h" />
     <ClInclude Include="src\Json\Json.h" />
     <ClInclude Include="src\KeyCodes.h" />
     <ClInclude Include="src\Localisation\Language.h" />
     <ClInclude Include="src\Localisation\Localisation.h" />
     <ClInclude Include="src\Localisation\LocalisedString.h" />
     <ClInclude Include="src\Math\Math.h" />
-    <ClInclude Include="src\Diagnostics\MethodInfo.h" />
-    <ClInclude Include="src\Diagnostics\ModuleInfo.h" />
     <ClInclude Include="src\Networking\Exceptions.h" />
     <ClInclude Include="src\Networking\Platform_Windows\SocketWindows.h" />
     <ClInclude Include="src\Networking\Platform_Windows\WebWindows.h" />
     <ClInclude Include="src\Networking\Sockets.h" />
-    <ClInclude Include="src\Data Types\Quaternion.h" />
-    <ClInclude Include="src\Diagnostics\StackTrace.h" />
-    <ClInclude Include="src\Diagnostics\SymbolHelper.h" />
-    <ClInclude Include="src\Diagnostics\TypeInfo.h" />
-    <ClInclude Include="src\Data Types\Vectors.h" />
-    <ClInclude Include="src\Graphics\Window.h" />
     <ClInclude Include="src\Networking\Web.h" />
     <ClInclude Include="src\Physics\Physics.h" />
     <ClInclude Include="src\Physics\PhysicsEngine.h" />
@@ -232,16 +231,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\Application.cpp" />
-    <ClCompile Include="src\DragAPI.cpp" />
     <ClCompile Include="src\Array\Array.cpp" />
     <ClCompile Include="src\Console\Console.cpp" />
     <ClCompile Include="src\Data Types\Color.cpp" />
+    <ClCompile Include="src\Data Types\Matrix.cpp" />
     <ClCompile Include="src\Data Types\Platform\Windows\DateTime Windows.cpp" />
+    <ClCompile Include="src\Data Types\Quaternion.cpp" />
     <ClCompile Include="src\Data Types\Rect.cpp" />
     <ClCompile Include="src\Data Types\String.cpp" />
+    <ClCompile Include="src\Data Types\Vectors.cpp" />
     <ClCompile Include="src\DateTime.cpp" />
     <ClCompile Include="src\Debugging\Platform\Windows\LoggingWindows.cpp" />
+    <ClCompile Include="src\Diagnostics\MethodInfo.cpp" />
+    <ClCompile Include="src\Diagnostics\ModuleInfo.cpp" />
     <ClCompile Include="src\Diagnostics\Platform\Windows\StackTraceWindows.cpp" />
+    <ClCompile Include="src\Diagnostics\StackTrace.cpp" />
+    <ClCompile Include="src\Diagnostics\SymbolHelper.cpp" />
+    <ClCompile Include="src\DragAPI.cpp" />
     <ClCompile Include="src\Event System\ApplicationEvents.cpp" />
     <ClCompile Include="src\Event System\Event.cpp" />
     <ClCompile Include="src\Event System\EventExceptions.cpp" />
@@ -252,22 +258,16 @@
     <ClCompile Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.cpp" />
     <ClCompile Include="src\Graphics\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Graphics\Renderer.cpp" />
+    <ClCompile Include="src\Graphics\Window.cpp" />
     <ClCompile Include="src\HTML\HTML.cpp" />
-    <ClCompile Include="src\Injector.cpp" />
     <ClCompile Include="src\IO\IOExceptions.cpp" />
+    <ClCompile Include="src\Injector.cpp" />
     <ClCompile Include="src\Localisation\Language.cpp" />
     <ClCompile Include="src\Localisation\LocalisedString.cpp" />
     <ClCompile Include="src\Math\Math.cpp" />
-    <ClCompile Include="src\Diagnostics\MethodInfo.cpp" />
-    <ClCompile Include="src\Diagnostics\ModuleInfo.cpp" />
     <ClCompile Include="src\Networking\Platform_Windows\SocketWindows.cpp" />
     <ClCompile Include="src\Networking\Platform_Windows\WebWindows.cpp" />
     <ClCompile Include="src\Networking\Sockets.cpp" />
-    <ClCompile Include="src\Data Types\Quaternion.cpp" />
-    <ClCompile Include="src\Diagnostics\StackTrace.cpp" />
-    <ClCompile Include="src\Diagnostics\SymbolHelper.cpp" />
-    <ClCompile Include="src\Data Types\Vectors.cpp" />
-    <ClCompile Include="src\Graphics\Window.cpp" />
     <ClCompile Include="src\Networking\Web.cpp" />
     <ClCompile Include="src\Physics\PhysicsEngine.cpp" />
     <ClCompile Include="src\Text\Text Document\TextDocument.cpp" />
@@ -275,7 +275,18 @@
     <ClCompile Include="src\Types\Types.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
+    <ProjectReference Include="..\DragAPI_Core\DragAPI_Core.vcxproj">
+      <Project>{051AB3DE-F17C-4283-9A02-7B3986440E06}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DragAPI_Math\DragAPI_Math.vcxproj">
+      <Project>{865AB8DE-72BD-4783-1B43-803907851306}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DragAPI_Graphical\DragAPI_Graphical.vcxproj">
+      <Project>{2758B453-936E-B2E9-DCE5-3D0B483B8371}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DragAPI_Networking\DragAPI_Networking.vcxproj">
+      <Project>{848CEDB0-7070-AE06-D9D0-A859C5D39888}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

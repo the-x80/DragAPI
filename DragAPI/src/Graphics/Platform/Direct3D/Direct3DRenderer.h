@@ -38,6 +38,9 @@
 #include <d3dcompiler.h>
 #pragma comment(lib, "d3dcompiler.lib")
 
+//This shit is pretty much done as far as the basic drawing to the screen goes.
+//More advanced tehniques will come shortly
+
 
 
 namespace DragAPI {
@@ -277,6 +280,8 @@ namespace DragAPI {
 				IDevice();
 				IDevice(ID3D11Device* pDevice);
 				~IDevice();
+
+				virtual void CreateSwapChain(DragAPI::Window* pWindow, DragAPI::Graphics::ISwapChain** ppSwapChain) override;
 
 				virtual void CreateVertexBuffer(
 					BufferUsage usage,

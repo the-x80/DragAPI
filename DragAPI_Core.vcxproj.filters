@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DragAPI">
+      <UniqueIdentifier>{5DBB3887-C99A-B722-D2B2-42F93E111E84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\include">
+      <UniqueIdentifier>{D0EF8571-3C7B-F335-458C-762AB1964F36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src">
+      <UniqueIdentifier>{F4DFCCA1-6095-4597-E989-3F6E553E3C9B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Application">
+      <UniqueIdentifier>{B7A965E4-23E1-AD7B-2CEB-119F98A1D474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Array">
+      <UniqueIdentifier>{622AB596-CE40-B32C-17B8-3E4E830D84B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Console">
+      <UniqueIdentifier>{16AB5FAB-820C-3DB9-0B7A-836B77DA7378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Crypto">
+      <UniqueIdentifier>{24DE0872-10C2-C9C7-7922-C41A6525B449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Data Types">
+      <UniqueIdentifier>{D201124C-BEFB-3A9E-A768-D1AE9301A10A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Data Types\Platform">
+      <UniqueIdentifier>{666A3CF7-D24D-4B37-DB50-797347B31188}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Data Types\Platform\Windows">
+      <UniqueIdentifier>{A01AA9E9-0CAA-6AD4-15A6-4BEC81B4A5E0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Debugging">
+      <UniqueIdentifier>{AFFE3CA4-1B6B-F89E-E45E-90FC508A1A07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Debugging\Platform">
+      <UniqueIdentifier>{E32FA202-CF55-6C69-B89B-F134A4609135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Debugging\Platform\Windows">
+      <UniqueIdentifier>{1D0DC72D-095F-9E1D-F27D-DB2DDE6EB706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Diagnostics">
+      <UniqueIdentifier>{FBD8C485-6710-0D1D-701A-7140DCD03316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Diagnostics\Platform">
+      <UniqueIdentifier>{AF5FC2BE-9BB0-AD00-C414-9CC2B0C4406A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Diagnostics\Platform\Windows">
+      <UniqueIdentifier>{E948D0B5-D5C5-C3F8-FE42-C40CEA1E608C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Diagnostics\Profiling">
+      <UniqueIdentifier>{34EBD435-A059-2AB5-E942-E5B455F01F51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Event System">
+      <UniqueIdentifier>{6A4CA7F2-5671-F672-7FBC-DB026B40F590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Exceptions">
+      <UniqueIdentifier>{6583AB07-517D-D459-3AEA-6A6A26833AC6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Exceptions\Platform">
+      <UniqueIdentifier>{59612874-C544-37B4-CE47-65F03AAAFD04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Exceptions\Platform\Windows">
+      <UniqueIdentifier>{93544A48-FFE3-0B33-08E0-EC4A74EE463F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Graphics">
+      <UniqueIdentifier>{B4DABD90-A069-475A-4988-5B5535F65700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Graphics\Platform">
+      <UniqueIdentifier>{88610F28-F479-F651-BD26-86EB29FE8AEB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Graphics\Platform\Direct3D">
+      <UniqueIdentifier>{09D1C997-F522-A187-DE41-DE97CA32BA70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Graphics\Platform\Windows">
+      <UniqueIdentifier>{C2130A56-2ED8-0846-F73D-391063C1A47B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\HTML">
+      <UniqueIdentifier>{F862560C-E45B-755E-0D8E-5AE3F9E5546A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\IO">
+      <UniqueIdentifier>{1B1D1B59-07EB-0E5F-F07E-7F85DCEBEAC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Json">
+      <UniqueIdentifier>{1D04580C-09FD-765E-322F-5CE31E87566A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Localisation">
+      <UniqueIdentifier>{E5D89E8B-D1FD-ED0B-FA48-D39BE6CCEC29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Math">
+      <UniqueIdentifier>{4D5D590C-3956-785E-6288-5DE34EE0576A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Networking">
+      <UniqueIdentifier>{8B484D9E-7742-76F0-60AF-0C014C48DC5C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Networking\Platform_Windows">
+      <UniqueIdentifier>{A9B4EFC0-1544-B1AB-1E40-92C38A4EECB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Physics">
+      <UniqueIdentifier>{66978784-D2F8-6492-5B66-AB44C7C69B51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Text">
+      <UniqueIdentifier>{88455D0C-743E-7C5E-9D70-61E389C85B6A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Text\Text Document">
+      <UniqueIdentifier>{7B05DD1E-672B-A785-5071-2C513C36CC51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Threading">
+      <UniqueIdentifier>{3997AC5A-A503-6855-6EF7-FFB2DA228ABD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Threading\Platform">
+      <UniqueIdentifier>{AD03CFD9-9929-9940-826F-1E0C6E34BE0C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI\src\Types">
+      <UniqueIdentifier>{98CA1098-04E1-0E2E-4D58-9A4FB9ADDFB5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI Tester">
+      <UniqueIdentifier>{1453408D-0021-3493-E9B4-A4B9D52110F8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Core">
+      <UniqueIdentifier>{051AB3DE-F17C-4283-9A02-7B3986440E06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Core\include">
+      <UniqueIdentifier>{787628C6-6405-B28F-0D24-C68AF991C235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Core\src">
+      <UniqueIdentifier>{9C5226D7-884B-4529-B17D-2AAE9DD52435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Graphical">
+      <UniqueIdentifier>{2758B453-936E-B2E9-DCE5-3D0B483B8371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Graphical\include">
+      <UniqueIdentifier>{9AB60E48-0679-42D2-4F29-D15EBB2A1BB0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Graphical\src">
+      <UniqueIdentifier>{BED1FD48-2A3E-B943-F331-51A15F5DDBAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Networking">
+      <UniqueIdentifier>{848CEDB0-7070-AE06-D9D0-A859C5D39888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Networking\include">
+      <UniqueIdentifier>{F7F77066-E307-1D37-4CC1-815538F00BD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DragAPI_Networking\src">
+      <UniqueIdentifier>{9BEC434E-87E6-6CA0-7053-03B15CECD20C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DragAPI\include\DragAPI.h">
+      <Filter>DragAPI\include</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Application\Application.h">
+      <Filter>DragAPI\src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Array\Array.h">
+      <Filter>DragAPI\src\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Callback.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Console\Console.h">
+      <Filter>DragAPI\src\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Crypto\Crypto.h">
+      <Filter>DragAPI\src\Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Color.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\DateTime.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Integers.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Matrix.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Quaternion.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Queue.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Rect.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Stack.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\String.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Data Types\Vectors.h">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\DateTime.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Debugging\Debug.h">
+      <Filter>DragAPI\src\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Debugging\Logging.h">
+      <Filter>DragAPI\src\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\Diagnostics.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\InfoObject.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\MethodInfo.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\ModuleInfo.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\Platform\Windows\StackTraceWindows.h">
+      <Filter>DragAPI\src\Diagnostics\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\Profiling\Profiling.h">
+      <Filter>DragAPI\src\Diagnostics\Profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\StackTrace.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\SymbolHelper.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Diagnostics\TypeInfo.h">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\DragAPI.Core.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\DragAPI.Entry.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\DragAPI.Networking.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\DragAPI.PlatformDefinitions.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\ApplicationEvents.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\Event.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\EventExceptions.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\EventSystem.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\KeyboardEvents.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Event System\WindowEvents.h">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Exceptions\Exceptions.h">
+      <Filter>DragAPI\src\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Exceptions\Platform\Windows\ExceptionsWindows.h">
+      <Filter>DragAPI\src\Exceptions\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Graphics\Graphics.h">
+      <Filter>DragAPI\src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Graphics\Platform\Direct3D\Direct3DRenderer.h">
+      <Filter>DragAPI\src\Graphics\Platform\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Graphics\Platform\Windows\WindowsWindow.h">
+      <Filter>DragAPI\src\Graphics\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Graphics\Renderer.h">
+      <Filter>DragAPI\src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Graphics\Window.h">
+      <Filter>DragAPI\src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\HTML\HTML.h">
+      <Filter>DragAPI\src\HTML</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\IO\IO.h">
+      <Filter>DragAPI\src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\IO\IOExceptions.h">
+      <Filter>DragAPI\src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Injector.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Json\Json.h">
+      <Filter>DragAPI\src\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\KeyCodes.h">
+      <Filter>DragAPI\src</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Localisation\Language.h">
+      <Filter>DragAPI\src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Localisation\Localisation.h">
+      <Filter>DragAPI\src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Localisation\LocalisedString.h">
+      <Filter>DragAPI\src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Math\Math.h">
+      <Filter>DragAPI\src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Networking\Exceptions.h">
+      <Filter>DragAPI\src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Networking\Platform_Windows\SocketWindows.h">
+      <Filter>DragAPI\src\Networking\Platform_Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Networking\Platform_Windows\WebWindows.h">
+      <Filter>DragAPI\src\Networking\Platform_Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Networking\Sockets.h">
+      <Filter>DragAPI\src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Networking\Web.h">
+      <Filter>DragAPI\src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Physics\Physics.h">
+      <Filter>DragAPI\src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Physics\PhysicsEngine.h">
+      <Filter>DragAPI\src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Text\Text Document\TextDocument.h">
+      <Filter>DragAPI\src\Text\Text Document</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Text\Text.h">
+      <Filter>DragAPI\src\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Threading\Threading.h">
+      <Filter>DragAPI\src\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI\src\Types\Types.h">
+      <Filter>DragAPI\src\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI_Core\include\DragAPI_Core.h">
+      <Filter>DragAPI_Core\include</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI_Graphical\include\DragAPI_Graphical.h">
+      <Filter>DragAPI_Graphical\include</Filter>
+    </ClInclude>
+    <ClInclude Include="DragAPI_Networking\include\DragAPI_Networking.h">
+      <Filter>DragAPI_Networking\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DragAPI Tester\DragAPI Tester.cpp">
+      <Filter>DragAPI Tester</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Application\Application.cpp">
+      <Filter>DragAPI\src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Array\Array.cpp">
+      <Filter>DragAPI\src\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Console\Console.cpp">
+      <Filter>DragAPI\src\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Color.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Matrix.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Platform\Windows\DateTime Windows.cpp">
+      <Filter>DragAPI\src\Data Types\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Quaternion.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Rect.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\String.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Data Types\Vectors.cpp">
+      <Filter>DragAPI\src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\DateTime.cpp">
+      <Filter>DragAPI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Debugging\Platform\Windows\LoggingWindows.cpp">
+      <Filter>DragAPI\src\Debugging\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Diagnostics\MethodInfo.cpp">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Diagnostics\ModuleInfo.cpp">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Diagnostics\Platform\Windows\StackTraceWindows.cpp">
+      <Filter>DragAPI\src\Diagnostics\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Diagnostics\StackTrace.cpp">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Diagnostics\SymbolHelper.cpp">
+      <Filter>DragAPI\src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\DragAPI.cpp">
+      <Filter>DragAPI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\ApplicationEvents.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\Event.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\EventExceptions.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\EventSystem.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\KeyboardEvents.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Event System\WindowEvents.cpp">
+      <Filter>DragAPI\src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Exceptions\Exceptions.cpp">
+      <Filter>DragAPI\src\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Graphics\Platform\Direct3D\Direct3DRenderer.cpp">
+      <Filter>DragAPI\src\Graphics\Platform\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Graphics\Platform\Windows\WindowsWindow.cpp">
+      <Filter>DragAPI\src\Graphics\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Graphics\Renderer.cpp">
+      <Filter>DragAPI\src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Graphics\Window.cpp">
+      <Filter>DragAPI\src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\HTML\HTML.cpp">
+      <Filter>DragAPI\src\HTML</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\IO\IOExceptions.cpp">
+      <Filter>DragAPI\src\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Injector.cpp">
+      <Filter>DragAPI\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Localisation\Language.cpp">
+      <Filter>DragAPI\src\Localisation</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Localisation\LocalisedString.cpp">
+      <Filter>DragAPI\src\Localisation</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Math\Math.cpp">
+      <Filter>DragAPI\src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Networking\Platform_Windows\SocketWindows.cpp">
+      <Filter>DragAPI\src\Networking\Platform_Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Networking\Platform_Windows\WebWindows.cpp">
+      <Filter>DragAPI\src\Networking\Platform_Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Networking\Sockets.cpp">
+      <Filter>DragAPI\src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Networking\Web.cpp">
+      <Filter>DragAPI\src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Physics\PhysicsEngine.cpp">
+      <Filter>DragAPI\src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Text\Text Document\TextDocument.cpp">
+      <Filter>DragAPI\src\Text\Text Document</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Threading\Platform\ThreadingWindows.cpp">
+      <Filter>DragAPI\src\Threading\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI\src\Types\Types.cpp">
+      <Filter>DragAPI\src\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI_Core\src\DragAPI_Core.cpp">
+      <Filter>DragAPI_Core\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI_Graphical\src\DragAPI_Graphical.cpp">
+      <Filter>DragAPI_Graphical\src</Filter>
+    </ClCompile>
+    <ClCompile Include="DragAPI_Networking\src\DragAPI_Networking.cpp">
+      <Filter>DragAPI_Networking\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

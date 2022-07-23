@@ -13,19 +13,15 @@ namespace DragAPI {
 
 	};
 
-	class Matrix3x3 {
+	struct Matrix3x3 {
 	public:
 		double m_Elements[3][3];
-
-		Matrix3x3();
-
 	};
-	class Matrix4x4 {
+	struct Matrix4x4 {
 	public:
 		double m_Elements[4][4];
 
 		Matrix4x4();
-
-
+		Matrix4x4(const Matrix4x4& right);
 	};
 }

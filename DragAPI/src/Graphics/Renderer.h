@@ -111,7 +111,11 @@ namespace DragAPI {
 		
 		class IRenderTargetView {
 		public:
-
+			virtual ~IRenderTargetView() {};
+		};
+		class IDepthStencilView {
+		public:
+			virtual ~IDepthStencilView() {};
 		};
 
 		class IAdapter {
@@ -139,6 +143,8 @@ namespace DragAPI {
 		class IDevice {
 		public:
 			virtual ~IDevice() {};
+
+			virtual void CreateSwapChain(Window* pWindow, ISwapChain** ppSwapChain) = 0;
 
 			virtual void CreateVertexBuffer(
 				BufferUsage usage,
@@ -260,6 +266,8 @@ namespace DragAPI {
 				IDevice** ppDevice, 
 				IDeviceContext** ppDeviceContext
 			) = 0;
+
+			
 
 			virtual void CreateDeviceAndSwapChain(
 				IAdapter* pAdapter,

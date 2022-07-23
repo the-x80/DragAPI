@@ -1,348 +1,447 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="include">
+      <UniqueIdentifier>{89AF369E-F58E-B539-FEA6-40106A051C9B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="src\Application">
+      <UniqueIdentifier>{701253C7-DC9D-C08B-E5AE-438051B91C8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Array">
+      <UniqueIdentifier>{5BBC94B2-C726-4929-1065-FACE7C0E277E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Console">
+      <UniqueIdentifier>{4F9F6B3D-BB54-E432-4449-DE09B0FDDA36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Crypto">
+      <UniqueIdentifier>{3DAFDA09-2967-1C57-926E-F5B27E45B747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Data Types">
+      <UniqueIdentifier>{6BB7282C-5785-1C32-4019-8D582C86F896}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Data Types\Platform">
+      <UniqueIdentifier>{1F7CFF32-8BB3-47CA-94BD-ABED00746EC3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Data Types\Platform\Windows">
+      <UniqueIdentifier>{59D5DAA9-C5B8-E9E9-CEBB-17263A1EB03A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Debugging">
+      <UniqueIdentifier>{28E516E9-94A5-921F-5DE0-DB9CC95FD7FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Debugging\Platform">
+      <UniqueIdentifier>{7C6EFD32-6868-2685-51D5-BC953D6E8CF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Debugging\Platform\Windows">
+      <UniqueIdentifier>{B6D4DF4A-A2FA-A9B1-8B40-2F7D7705CF7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Diagnostics">
+      <UniqueIdentifier>{B441B268-20CD-1F2D-29DE-A22195E87B2D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Diagnostics\Platform">
+      <UniqueIdentifier>{88A8E772-74CD-36F3-9D18-1C83899C3511}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Diagnostics\Platform\Windows">
+      <UniqueIdentifier>{C25A397C-AEAB-24BE-D70F-1380C3BFB727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Diagnostics\Profiling">
+      <UniqueIdentifier>{2D4FA36E-9911-D7F8-E2C1-65854EC3AFD6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Event System">
+      <UniqueIdentifier>{43CC4133-2FC5-6085-58F7-450A444F4091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Exceptions">
+      <UniqueIdentifier>{FE38C2E7-EA06-B6ED-D39A-2614BF079252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Exceptions\Platform">
+      <UniqueIdentifier>{1273EBAF-7EAA-3347-87B4-976AF36A5A40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Exceptions\Platform\Windows">
+      <UniqueIdentifier>{4C0F7C08-B8F2-8A48-C1F5-B8842D585199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics">
+      <UniqueIdentifier>{0D564864-F9B8-D708-A23E-10BF8E80A38B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics\Platform">
+      <UniqueIdentifier>{01B14012-6D1D-FC0C-3611-946AA23C1E75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics\Platform\Direct3D">
+      <UniqueIdentifier>{A298E2B4-8EBE-AC1B-7704-32E763C9D1E7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphics\Platform\Windows">
+      <UniqueIdentifier>{3BCCEB56-A7E4-D280-7091-621ADC68671A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\HTML">
+      <UniqueIdentifier>{D1191FCF-BDE6-79DA-E6FF-6782D22BAF68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\IO">
+      <UniqueIdentifier>{B449661C-A0EB-90F2-89A6-A44675E71743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Json">
+      <UniqueIdentifier>{F6BA20CF-E287-7BDA-0BA1-6982F7CCB068}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Localisation">
+      <UniqueIdentifier>{BE5839CC-AA51-581E-D383-3DA3BFDB372A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Math">
+      <UniqueIdentifier>{261422CF-12E1-7CDA-3BFA-6A822726B268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Networking">
+      <UniqueIdentifier>{24FE637E-10CC-5784-F95F-C8AAE5CC33E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Networking\Platform_Windows">
+      <UniqueIdentifier>{626F2181-CE52-30C1-D755-5EFD43B8F611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Physics">
+      <UniqueIdentifier>{9F8B9316-0B41-0C0C-9435-06E300EA0210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Text">
+      <UniqueIdentifier>{61FC25CF-4DC9-80DA-76E2-6E82620EB668}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Text\Text Document">
+      <UniqueIdentifier>{1444384F-003E-61A1-E9AA-F7B1D543C70D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Threading">
+      <UniqueIdentifier>{B27D869F-1E3E-02D6-E778-4B5353F846B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Threading\Platform">
+      <UniqueIdentifier>{46422A0A-323C-535C-1BA9-E96C0742B9C8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Types">
+      <UniqueIdentifier>{915CF0B3-FDC6-A42A-4605-56D0B2AE827F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\DragAPI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Array\Array.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Exceptions\Exceptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\MethodInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\ModuleInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\StackTrace.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\SymbolHelper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\InfoObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\TypeInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Graphics\Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DateTime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Vectors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Quaternion.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DragAPI.Networking.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Networking\Sockets.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Json\Json.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\IO\IO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\IO\IOExceptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\String.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Integers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Math\Math.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Graphics\Graphics.h">
-      <Filter>Header Files</Filter>
+      <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="src\Application\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>src\Application</Filter>
     </ClInclude>
-    <ClInclude Include="src\Diagnostics\Diagnostics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\Profiling\Profiling.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Injector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Networking\Web.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\HTML\HTML.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Text\Text Document\TextDocument.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Text\Text.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Crypto\Crypto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Rect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Color.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Data Types\Stack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Console\Console.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Array\Array.h">
+      <Filter>src\Array</Filter>
     </ClInclude>
     <ClInclude Include="src\Callback.h">
-      <Filter>Header Files</Filter>
+      <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\Data Types\Queue.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Console\Console.h">
+      <Filter>src\Console</Filter>
     </ClInclude>
-    <ClInclude Include="src\Localisation\Localisation.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Crypto\Crypto.h">
+      <Filter>src\Crypto</Filter>
     </ClInclude>
-    <ClInclude Include="src\Localisation\Language.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Localisation\LocalisedString.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Physics\Physics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Physics\PhysicsEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Networking\Exceptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DragAPI.PlatformDefinitions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Networking\Platform_Windows\SocketWindows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Networking\Platform_Windows\WebWindows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DragAPI.Entry.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\EventSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\Event.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\KeyboardEvents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\KeyCodes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DragAPI.Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Graphics\Platform\Windows\WindowsWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\EventExceptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\ApplicationEvents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Types\Types.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Event System\WindowEvents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Threading\Threading.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Debugging\Debug.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Diagnostics\Platform\Windows\StackTraceWindows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Exceptions\Platform\Windows\ExceptionsWindows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Debugging\Logging.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Data Types\Color.h">
+      <Filter>src\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="src\Data Types\DateTime.h">
-      <Filter>Header Files</Filter>
+      <Filter>src\Data Types</Filter>
     </ClInclude>
-    <ClInclude Include="src\Graphics\Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Data Types\Integers.h">
+      <Filter>src\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="src\Data Types\Matrix.h">
-      <Filter>Header Files</Filter>
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\Quaternion.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\Queue.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\Rect.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\Stack.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\String.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Data Types\Vectors.h">
+      <Filter>src\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DateTime.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Debugging\Debug.h">
+      <Filter>src\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Debugging\Logging.h">
+      <Filter>src\Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\Diagnostics.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\InfoObject.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\MethodInfo.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\ModuleInfo.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\Platform\Windows\StackTraceWindows.h">
+      <Filter>src\Diagnostics\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\Profiling\Profiling.h">
+      <Filter>src\Diagnostics\Profiling</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\StackTrace.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\SymbolHelper.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diagnostics\TypeInfo.h">
+      <Filter>src\Diagnostics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DragAPI.Core.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DragAPI.Entry.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DragAPI.Networking.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DragAPI.PlatformDefinitions.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\ApplicationEvents.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\Event.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\EventExceptions.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\EventSystem.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\KeyboardEvents.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Event System\WindowEvents.h">
+      <Filter>src\Event System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Exceptions\Exceptions.h">
+      <Filter>src\Exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Exceptions\Platform\Windows\ExceptionsWindows.h">
+      <Filter>src\Exceptions\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Graphics.h">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.h">
+      <Filter>src\Graphics\Platform\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Platform\Windows\WindowsWindow.h">
+      <Filter>src\Graphics\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Renderer.h">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Graphics\Window.h">
+      <Filter>src\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HTML\HTML.h">
+      <Filter>src\HTML</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IO\IO.h">
+      <Filter>src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IO\IOExceptions.h">
+      <Filter>src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Injector.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Json\Json.h">
+      <Filter>src\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KeyCodes.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Localisation\Language.h">
+      <Filter>src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Localisation\Localisation.h">
+      <Filter>src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Localisation\LocalisedString.h">
+      <Filter>src\Localisation</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Math\Math.h">
+      <Filter>src\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Networking\Exceptions.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Networking\Platform_Windows\SocketWindows.h">
+      <Filter>src\Networking\Platform_Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Networking\Platform_Windows\WebWindows.h">
+      <Filter>src\Networking\Platform_Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Networking\Sockets.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Networking\Web.h">
+      <Filter>src\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\Physics.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Physics\PhysicsEngine.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Text\Text Document\TextDocument.h">
+      <Filter>src\Text\Text Document</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Text\Text.h">
+      <Filter>src\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Threading\Threading.h">
+      <Filter>src\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Types\Types.h">
+      <Filter>src\Types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Array\Array.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Exceptions\Exceptions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Diagnostics\MethodInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Diagnostics\ModuleInfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Diagnostics\StackTrace.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Diagnostics\SymbolHelper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Graphics\Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\DateTime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Data Types\Vectors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Data Types\Quaternion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Networking\Sockets.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\IO\IOExceptions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Data Types\String.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Math\Math.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Injector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Networking\Web.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\HTML\HTML.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Text\Text Document\TextDocument.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Data Types\Rect.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Application\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Application</Filter>
     </ClCompile>
-    <ClCompile Include="src\Data Types\Color.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Array\Array.cpp">
+      <Filter>src\Array</Filter>
     </ClCompile>
     <ClCompile Include="src\Console\Console.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Console</Filter>
     </ClCompile>
-    <ClCompile Include="src\Localisation\Language.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Data Types\Color.cpp">
+      <Filter>src\Data Types</Filter>
     </ClCompile>
-    <ClCompile Include="src\Localisation\LocalisedString.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Physics\PhysicsEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\DragAPI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Networking\Platform_Windows\SocketWindows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Networking\Platform_Windows\WebWindows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\EventExceptions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\EventSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\KeyboardEvents.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Types\Types.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\ApplicationEvents.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Event System\WindowEvents.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Threading\Platform\ThreadingWindows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Diagnostics\Platform\Windows\StackTraceWindows.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Debugging\Platform\Windows\LoggingWindows.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Data Types\Matrix.cpp">
+      <Filter>src\Data Types</Filter>
     </ClCompile>
     <ClCompile Include="src\Data Types\Platform\Windows\DateTime Windows.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Data Types\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\Graphics\Renderer.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Data Types\Quaternion.cpp">
+      <Filter>src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Data Types\Rect.cpp">
+      <Filter>src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Data Types\String.cpp">
+      <Filter>src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Data Types\Vectors.cpp">
+      <Filter>src\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DateTime.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Debugging\Platform\Windows\LoggingWindows.cpp">
+      <Filter>src\Debugging\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Diagnostics\MethodInfo.cpp">
+      <Filter>src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Diagnostics\ModuleInfo.cpp">
+      <Filter>src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Diagnostics\Platform\Windows\StackTraceWindows.cpp">
+      <Filter>src\Diagnostics\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Diagnostics\StackTrace.cpp">
+      <Filter>src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Diagnostics\SymbolHelper.cpp">
+      <Filter>src\Diagnostics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DragAPI.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\ApplicationEvents.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\Event.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\EventExceptions.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\EventSystem.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\KeyboardEvents.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Event System\WindowEvents.cpp">
+      <Filter>src\Event System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Exceptions\Exceptions.cpp">
+      <Filter>src\Exceptions</Filter>
     </ClCompile>
     <ClCompile Include="src\Graphics\Platform\Direct3D\Direct3DRenderer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Graphics\Platform\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="src\Graphics\Platform\Windows\WindowsWindow.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>src\Graphics\Platform\Windows</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="cpp.hint" />
+    <ClCompile Include="src\Graphics\Renderer.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\Window.cpp">
+      <Filter>src\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HTML\HTML.cpp">
+      <Filter>src\HTML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IO\IOExceptions.cpp">
+      <Filter>src\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Injector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Localisation\Language.cpp">
+      <Filter>src\Localisation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Localisation\LocalisedString.cpp">
+      <Filter>src\Localisation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Math\Math.cpp">
+      <Filter>src\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Networking\Platform_Windows\SocketWindows.cpp">
+      <Filter>src\Networking\Platform_Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Networking\Platform_Windows\WebWindows.cpp">
+      <Filter>src\Networking\Platform_Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Networking\Sockets.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Networking\Web.cpp">
+      <Filter>src\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics\PhysicsEngine.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Text\Text Document\TextDocument.cpp">
+      <Filter>src\Text\Text Document</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Threading\Platform\ThreadingWindows.cpp">
+      <Filter>src\Threading\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Types\Types.cpp">
+      <Filter>src\Types</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
