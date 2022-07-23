@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdint.h>
 
 namespace DragAPI {
 	struct rect_uint8 {

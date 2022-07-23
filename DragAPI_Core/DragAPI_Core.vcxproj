@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="include\DragAPI\Core.h" />
     <ClInclude Include="src\Exception\Exception.h" />
+    <ClInclude Include="src\Types\Matrices.h" />
     <ClInclude Include="src\Types\Rect.h" />
     <ClInclude Include="src\Types\Types.h" />
     <ClInclude Include="src\Types\Vectors.h" />

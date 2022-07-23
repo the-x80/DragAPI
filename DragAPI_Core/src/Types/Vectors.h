@@ -1,5 +1,7 @@
 #ifndef DRAG_API_VECTOR3_H
 #define DRAG_API_VECTOR3_H
+#include <stdint.h>
+
 namespace DragAPI {
 	struct vector2_uint8 {
 		uint8_t x, y;
