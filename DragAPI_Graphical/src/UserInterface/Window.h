@@ -8,7 +8,7 @@ namespace DragAPI::UI {
 
 		static Window* Create(
 			const char* pCaption,
-			const DragAPI::rect_u16& rClientRect
+			const DragAPI::rect_uint16& rClientRect
 		);//See what can be implemented here. Keep the parameter list as brief as possible
 	};
 }
